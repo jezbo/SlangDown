@@ -1,0 +1,27 @@
+import React, { useState, useEffect } from 'react';
+
+const Clock = (props) => {
+    const [time, setTime] = useState(props.time ? props.time : 30);
+    
+        
+    useEffect(() =>{
+        while(time>0) {
+            const intervalID01 = setInterval(() => {
+                setTime(time-1);
+            }, 1000)
+            if(time===0) {
+                clearInterval(intervalID01)
+            }
+        }
+    })
+    return(
+        <div>
+            <p className="timeLeft">
+                {time + ' seconds'} 
+            </p>
+            
+        </div>
+    )
+}
+
+export default Clock;
