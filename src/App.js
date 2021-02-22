@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Tile from './modules/tiles';
-import Button from './modules/button';
 import Word from './modules/word';
-import WordBox from './modules/wordBox';
+
+
+const App = () => {
+    
+  return(
+    <div className="container">
+      <Word value={"spudsicles"} />
+    </div>
+  )
+}
 
 
 
@@ -32,4 +38,4 @@ import WordBox from './modules/wordBox';
 //   );
 // }
 
-// export default App;
+export default App;
