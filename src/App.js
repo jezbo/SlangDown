@@ -7,17 +7,20 @@ import LetterTiles from './modules/letterTiles'
 
 const App = () => {
   return(
-    <div className="container-main">
-      <h2 className="Instructions">Instructions</h2>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
-      <Timer />
+    <div className="grid-container">
+      <div className="instructions-container">
+        <h2 className="instructions-title">...</h2>
+        <h3 className="instructions">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
+      </div>
+      <div className="timer-container">
+        <Timer />
+      </div>
       <div className="word-container">
         <Word value={"spudsicles"} />
       </div>
-      <LetterTiles />
-
-      
-      
+      <div className="tiles-container">
+        <LetterTiles />
+      </div>
       
     </div>
   )
