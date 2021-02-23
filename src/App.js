@@ -1,12 +1,24 @@
 import React from 'react';
+import Button from './modules/button';
 import Word from './modules/word';
+import Timer from './modules/timer';
+import LetterTiles from './modules/letterTiles'
 
 
 const App = () => {
-    
   return(
-    <div className="container">
-      <Word value={"spudsicles"} />
+    <div className="container-main">
+      <h2 className="Instructions">Instructions</h2>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
+      <Timer />
+      <div className="word-container">
+        <Word value={"spudsicles"} />
+      </div>
+      <LetterTiles />
+
+      
+      
+      
     </div>
   )
 }

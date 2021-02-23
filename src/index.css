@@ -7,10 +7,102 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.button {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font: Trebuchet MS;
+  font-weight: normal;
+  color: #3b3640;
+  min-width: 80px;
+  height: 30px;
+  padding: 2px 8px;
+  border: none;
+  background-color: #f2f7f4;
+  box-shadow: 2px 2px #edf0ee;
+  margin: 10px 20px;
+}
+
+.tile {
+  border: 1px solid black;
+  box-shadow: #d1d1d1;
+  max-width: 4vw;
+  max-height: 4vw;
+  font-size: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.tile-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.word-container {
+  height: 22px;
+  font: "Trebuchet MS";
+  display: flex;
+  align-items: center;
+  width: 150px;
+  cursor: context-menu;
+  }
+
+.word {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  box-shadow: 0px 0.3px 0px 0px grey;
+  padding: 2px 15px;
+}
+
+.exit {
+  width: 5px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  text-align: center;
+  box-shadow: 0px 0.3px 0.3px 0px grey;
+  font-size: 12px;
+}
+
 .exit:active {
-  box-shadow: 10px 10px red;
+  box-shadow: 1px 1px red;
   background-color: #f0f0f0;
-  color: black;
+  color: red;
+}
+
+.timeLeft {
+  background-color: #fcfcf7;
+  font-weight: bolder;
+  font-size: 10vw;
+  border: 1px black solid;
+  border-radius: 50%;
+  height: 14vw;
+  width: 14vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3px;
+  padding-right: 1px;
+}
+
+.timerContainer {
+  max-height: 15vw;
+  padding: 25px 25px;
+  background-color: #fcfcf7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
