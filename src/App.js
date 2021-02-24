@@ -1,24 +1,28 @@
 import React from 'react';
 import Button from './modules/button';
 import Word from './modules/word';
+import Menu from './modules/menu';
 import Timer from './modules/timer';
-import LetterTiles from './modules/letterTiles'
+import LetterTiles from './modules/letterTiles';
+import menuOnOff from './modules/menuOnOff';
 
 
 const App = () => {
+  let menuSwitch=false;
   return(
-    <div className="container-main">
-      <h2 className="Instructions">Instructions</h2>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
-      <Timer />
+<div className="grid-container">
+      <div className="menu-container">
+        <Menu onClick={menuOnOff(menuSwitch)} />
+      </div>
+      <div className="timer-container">
+        <Timer />
+      </div>
       <div className="word-container">
         <Word value={"spudsicles"} />
       </div>
-      <LetterTiles />
-
-      
-      
-      
+      <div className="tiles-container">
+        <LetterTiles />
+      </div>
     </div>
   )
 }

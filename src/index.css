@@ -1,17 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fcfcf7;
+  cursor: default;
+}
+
+button {
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  color: #222222;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #fdf9e2;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template: repeat(7, calc(1/7)vh)/repeat(13, calc(1/13)vw);
+}
+
+.menu-container {
+  grid-area: 1/1/span 1/ span 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.menuButton {
+  font-size: 4vh;
+  border-radius: 50%;
+  justify-self: center;
+  background-color: #fdf9e2;
+  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 10vh;
+  transform: rotate(90deg);
+}
+
+.menuButton:active {
+  transform: scale3d(1.2, 1.2, 0.5) rotate(90deg);
+  box-shadow: 0.21vh 0vh red;
+  background-color: #fff7a0;
+  color: red;
+}
+
+.timer-container {
+  grid-area: 2/6/5/9;
+  align-self: start;
+}
+
+.word-container {
+  grid-area: 2/11/span 3/span 3;
+}
+
+.tiles-container {
+  grid-area: 5/3/6/12;
+  align-self: end;
+}
+
+.instructions {
+  margin: 12vh 0 0 3vh; 
+  width: 12vh;
+  max-height: 12vh;
+  padding: 5vh;
+  text-align: left;
+  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
 }
 
 .button {
   display: flex;
   align-items:center;
   justify-content: center;
-  font: Trebuchet MS;
   font-weight: normal;
   color: #3b3640;
   min-width: 80px;
@@ -24,33 +100,40 @@ body {
 }
 
 .tile {
-  border: 1px solid black;
-  box-shadow: #d1d1d1;
-  max-width: 4vw;
-  max-height: 4vw;
-  font-size: 6vw;
+  border: 0.3vh #fcf6d1 solid;
+  box-shadow: 0.5vh 1.3vh #f0f0f0ac;
+  width: 14vh;
+  height: 14vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 13vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1vw;
   margin: 1vw;
+  background-color: #fdf9e2;
 }
 
-.tile-content {
+.tile:active {
+  box-shadow: 0.5vh 1.3vh red;
+  background-color: #fff7a0;
+  color: red;
+  transform: scale(1.1, 1.1);
+}
+
+.letterTiles-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  border: 1px solid black;
+  justify-content: center;
 }
 
 .word-container {
   height: 22px;
-  font: "Trebuchet MS";
+  font-family: "Trebuchet MS";
   display: flex;
   align-items: center;
   width: 150px;
-  cursor: context-menu;
+  cursor: default;
   }
 
 .word {
@@ -82,18 +165,19 @@ body {
 }
 
 .timeLeft {
-  background-color: #fcfcf7;
+  display: flex;
+  background-color: #fdf9e2;
+  box-shadow: 0.5vh 1.3vh #f0f0f0ac;
   font-weight: bolder;
   font-size: 10vw;
-  border: 1px black solid;
+  border: 1px #faf4d6 solid;
   border-radius: 50%;
   height: 14vw;
   width: 14vw;
-  display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3px;
-  padding-right: 1px;
+  padding-left: 0.5vw;
+  padding-top: 0.5vw;
 }
 
 .timerContainer {
@@ -105,7 +189,4 @@ body {
   justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
