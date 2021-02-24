@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './modules/button';
 import Word from './modules/word';
+import MenuButton from './modules/menu-button'
+import Menu from './modules/menu'
 import Timer from './modules/timer';
 import LetterTiles from './modules/letterTiles'
 
@@ -9,9 +11,11 @@ const App = () => {
   return(
 
 <div className="grid-container">
-      <div className="instructions-container">
-        <h2 className="instructions-title">...</h2>
-        <h3 className="instructions">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
+      <div className="menuButton-container">
+        <MenuButton />
+      </div>
+      <div className="menu-container">
+        <Menu />
       </div>
       <div className="timer-container">
         <Timer />

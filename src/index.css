@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fcfcf7;
+  cursor: default;
 }
 
 .grid-container{
@@ -11,11 +12,45 @@ body {
   grid-template: repeat(7, 1fr)/repeat(13, 1fr);
 }
 
-.instructions-container {
-  grid-area: 2/1/span 2/span 3;
-  align-self: start;
+.menuButton-container {
+  grid-area: 1/1/span 1/ span 1;
+  justify-self: center;
+  align-self: center;
+  font-size: 4vh;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 50%;
+  background-color: #fdf9e2;
+  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+}
+
+.menuButton-container:active {
+  transform: scale(1.2, 1.2);
+  box-shadow: 0.01vh 0.5vh red;
+  background-color: #fff7a0;
+  color: red;
+}
+
+.menu-container {
+  display: flex;
+  grid-area: 1/1/span 2/span 2;
+  margin: 12vh 0 0 3vh; 
+  width: 12vh;
+  max-height: 12vh;
+  padding: 5vh;
+  text-align: left;
+  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
+}
+
+.instructions-container {
+  grid-area: 1/2/span 2/span 1;
+  align-self: start;
+  display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -33,21 +68,13 @@ body {
   align-self: end;
 }
 
-
-.instructions-title {
-  width: 100%;
-  text-align: center;
-  font-size: 5vh;
-  font-weight: bold;
-  letter-spacing: 1vh;
-  
-}
-
-.instructions {
-  display: none;
-  width: 100%;
-  text-align: center;
-  font-size: 2vh;
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17vh;
+  width: 17vh;
+  transform: rotate(90deg);
 }
 
 .button {
@@ -79,6 +106,12 @@ body {
   background-color: #fdf9e2;
 }
 
+.tile:active {
+  box-shadow: 0.5vh 1.3vh red;
+  background-color: #fff7a0;
+  color: red;
+}
+
 .tile-content {
   display: flex;
   justify-content: center;
@@ -100,7 +133,7 @@ body {
   display: flex;
   align-items: center;
   width: 150px;
-  cursor: context-menu;
+  cursor: default;
   }
 
 .word {
