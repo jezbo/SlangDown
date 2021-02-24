@@ -1,21 +1,18 @@
 import React from 'react';
 import Button from './modules/button';
 import Word from './modules/word';
-import MenuButton from './modules/menu-button'
-import Menu from './modules/menu'
+import Menu from './modules/menu';
 import Timer from './modules/timer';
-import LetterTiles from './modules/letterTiles'
+import LetterTiles from './modules/letterTiles';
+import menuOnOff from './modules/menuOnOff';
 
 
 const App = () => {
+  let menuSwitch=false;
   return(
-
 <div className="grid-container">
-      <div className="menuButton-container">
-        <MenuButton />
-      </div>
       <div className="menu-container">
-        <Menu />
+        <Menu onClick={menuOnOff(menuSwitch)} />
       </div>
       <div className="timer-container">
         <Timer />
@@ -26,7 +23,6 @@ const App = () => {
       <div className="tiles-container">
         <LetterTiles />
       </div>
-      
     </div>
   )
 }

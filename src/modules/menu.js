@@ -1,9 +1,18 @@
-import React, {  } from 'react';
+import React from 'react';
+import Instructions from './instructions'
 
 const Menu = (props) => {
-    
-    return (
-        <p>Find the longest slang word before the time runs out!</p>
+    let onOff = false;
+    const instructionsSwitch = () => {
+        onOff ? onOff=false : onOff=true;
+        return onOff;
+    }
+
+    return(
+        <button onClick={props.onClick}>
+            <p className="menuButton">|||</p>
+            <Instructions onClick={instructionsSwitch}/> 
+        </button>
     )
 }
 

@@ -12,46 +12,32 @@ body {
   grid-template: repeat(7, 1fr)/repeat(13, 1fr);
 }
 
-.menuButton-container {
+.menu-container {
   grid-area: 1/1/span 1/ span 1;
   justify-self: center;
   align-self: center;
+}
+
+
+.menuButton {
   font-size: 4vh;
-  height: 7vh;
-  width: 7vh;
   border-radius: 50%;
+  justify-self: center;
   background-color: #fdf9e2;
   box-shadow: 0.01vh 0.5vh #f0f0f0ac;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  height: 10vh;
+  width: 10vh;
+  transform: rotate(90deg);
 }
 
-.menuButton-container:active {
-  transform: scale(1.2, 1.2);
-  box-shadow: 0.01vh 0.5vh red;
+.menuButton:active {
+  transform: scale3d(1.2, 1.2, 0.5) rotate(90deg);
+  box-shadow: 0.21vh 0vh red;
   background-color: #fff7a0;
   color: red;
-}
-
-.menu-container {
-  display: flex;
-  grid-area: 1/1/span 2/span 2;
-  margin: 12vh 0 0 3vh; 
-  width: 12vh;
-  max-height: 12vh;
-  padding: 5vh;
-  text-align: left;
-  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
-}
-
-.instructions-container {
-  grid-area: 1/2/span 2/span 1;
-  align-self: start;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .timer-container {
@@ -68,13 +54,13 @@ body {
   align-self: end;
 }
 
-.menuButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 17vh;
-  width: 17vh;
-  transform: rotate(90deg);
+.instructions {
+  margin: 12vh 0 0 3vh; 
+  width: 12vh;
+  max-height: 12vh;
+  padding: 5vh;
+  text-align: left;
+  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
 }
 
 .button {
@@ -110,6 +96,7 @@ body {
   box-shadow: 0.5vh 1.3vh red;
   background-color: #fff7a0;
   color: red;
+  transform: scale(1.1, 1.1);
 }
 
 .tile-content {
