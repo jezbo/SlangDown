@@ -2,11 +2,9 @@ import React from 'react';
 
 const Tile = (props) => {
     return(
-        <div className="tile" onClick={props.onClick}>
-            <p className="tile-content">
+        <button className="tile" onClick={props.onClick}>
                 {props.value}
-            </p>
-        </div>
+        </button>
     )
 }
 

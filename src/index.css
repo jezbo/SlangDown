@@ -1,15 +1,37 @@
 body {
   margin: 0;
-  font: "Trebuchet MS";
+  font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fcfcf7;
   cursor: default;
 }
 
+button {
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  color: #222222;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #fdf9e2;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
 .grid-container{
   display: grid;
-  grid-template: repeat(7, 1fr)/repeat(13, 1fr);
+  grid-template: repeat(7, calc(1/7)vh)/repeat(13, calc(1/13)vw);
 }
 
 .menu-container {
@@ -17,7 +39,6 @@ body {
   justify-self: center;
   align-self: center;
 }
-
 
 .menuButton {
   font-size: 4vh;
@@ -79,11 +100,12 @@ body {
 }
 
 .tile {
-  border: 1px solid #faf4d6;
+  border: 0.3vh #fcf6d1 solid;
   box-shadow: 0.5vh 1.3vh #f0f0f0ac;
-  max-width: 4vw;
-  max-height: 4vw;
-  font-size: 6vw;
+  width: 14vh;
+  height: 14vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 13vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,15 +121,6 @@ body {
   transform: scale(1.1, 1.1);
 }
 
-.tile-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 0.5vw;
-  padding-left: 0.2vw;
-}
-
 .letterTiles-container {
   display: flex;
   align-items: center;
@@ -116,7 +129,7 @@ body {
 
 .word-container {
   height: 22px;
-  font: "Trebuchet MS";
+  font-family: "Trebuchet MS";
   display: flex;
   align-items: center;
   width: 150px;
@@ -176,7 +189,4 @@ body {
   justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+

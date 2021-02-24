@@ -9,10 +9,13 @@ const Menu = (props) => {
     }
 
     return(
-        <button onClick={props.onClick}>
-            <p className="menuButton">|||</p>
+        <div className="menu-div" >
+            <button className="menuButton" onClick={props.onClick}>
+                |||
+            </button>
             <Instructions onClick={instructionsSwitch}/> 
-        </button>
+        </div>
+        
     )
 }
 
