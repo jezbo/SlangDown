@@ -1,22 +1,24 @@
-import React from 'react';
-import Instructions from './instructions'
+import React, { useState, useRef } from 'react';
 
-const Menu = (props) => {
-    let onOff = false;
-    const instructionsSwitch = () => {
-        onOff ? onOff=false : onOff=true;
-        return onOff;
+
+const DropDownMenu = (props) => {
+    const [isActive, setIsActive] = useState(false);
+    const dropdownRef = useRef(null);
+    const clickHandler = (e) => {
+        setIsActive(!isActive);
+        console.log(isActive)
     }
-
-    return(
+    return (
         <div className="menu-div" >
-            <button className="menuButton" onClick={props.onClick}>
+            <button className="menuButton" onClick={clickHandler}>
                 |||
             </button>
-            <Instructions onClick={instructionsSwitch}/> 
+            <p ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`} > 
+                Find the longest slang word before the time runs out!
+            </p>
         </div>
-        
-    )
+    ); 
 }
 
-export default Menu;
+export default DropDownMenu;
+
