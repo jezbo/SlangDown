@@ -4,15 +4,14 @@ import Word from './modules/word';
 import Menu from './modules/menu';
 import Timer from './modules/timer';
 import LetterTiles from './modules/letterTiles';
-import menuOnOff from './modules/menuOnOff';
+
 
 
 const App = () => {
-  let menuSwitch=false;
   return(
 <div className="grid-container">
       <div className="menu-container">
-        <Menu onClick={menuOnOff(menuSwitch)} />
+        <Menu />
       </div>
       <div className="timer-container">
         <Timer />
