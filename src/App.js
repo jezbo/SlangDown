@@ -3,7 +3,7 @@ import Button from './modules/button';
 import Word from './modules/word';
 import Menu from './modules/menu';
 import Timer from './modules/timer';
-import LetterTiles from './modules/letterTiles';
+import Tiles from './modules/Tiles';
 
 
 
@@ -21,7 +21,7 @@ const App = () => {
           value={[]} />
       </div>
       <div className="tiles-container">
-        <LetterTiles />
+        <Tiles />
       </div>
     </div>
   )
