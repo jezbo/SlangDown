@@ -191,7 +191,7 @@ button:focus {
 /*---TILES---*/
 
 .tiles-container {
-  grid-area: 5/3/span 1/span 7;
+  grid-area: 5/2/span 1/span 9;
   align-self: end;
 }
 
@@ -212,14 +212,14 @@ button:focus {
 .tile {
   border: 0.3vh #f6ecab solid;
   box-shadow: 0.5vh 0.6vh gray;
-  width: 14vh;
-  height: 14vh;
+  width: 15vh;
+  height: 15vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 13vh;
+  font-size: 14vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.5vh;
+  margin: 0 1vh;
   background-color: #fdf9e2;
 }
 
