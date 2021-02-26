@@ -45,7 +45,7 @@ button:focus {
   border-radius: 50%;
   justify-self: self-start;
   background-color: #fdf9e2;
-  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
+  box-shadow: 0.3vh -0.3vh gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ button:focus {
 
 .menuButton:active {
   transform: scale3d(1.2, 1.2, 0.5) rotate(90deg);
-  box-shadow: 0.21vh 0vh red;
+  box-shadow: 0.3vh -0.3vh rgba(255, 0, 0, 0.447);
   background-color: #fff7a0;
   color: red;
 }
@@ -99,7 +99,7 @@ button:focus {
   height: 0.7vh;
   padding: 5vh;
   text-align: left;
-  box-shadow: 0.01vh 0.5vh #f0f0f0ac;
+  box-shadow: 0.1vh 0.1vh gray;
   position: absolute;
   opacity: 1;
   visibility: visible;
@@ -117,7 +117,7 @@ button:focus {
 .timeLeft {
   display: flex;
   background-color: #fdf9e2;
-  box-shadow: 0.5vh 1.3vh #f0f0f0ac;
+  box-shadow: 0.2vh 0.3vh gray;
   font-weight: bolder;
   font-size: 10vw;
   border: 1px #faf4d6 solid;
@@ -210,8 +210,8 @@ button:focus {
 }
 
 .tile {
-  border: 0.3vh #fcf6d1 solid;
-  box-shadow: 0.5vh 1.3vh #f0f0f0ac;
+  border: 0.3vh #f6ecab solid;
+  box-shadow: 0.5vh 0.6vh gray;
   width: 14vh;
   height: 14vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -224,7 +224,7 @@ button:focus {
 }
 
 .tile:active {
-  box-shadow: 0.5vh 1.3vh red;
+  box-shadow: 0.5vh 0.6vh rgba(255, 0, 0, 0.447);
   background-color: #fff7a0;
   color: red;
   transform: scale(1.1, 1.1);

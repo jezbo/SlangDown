@@ -17,7 +17,8 @@ const App = () => {
         <Timer />
       </div>
       <div className="word-container">
-        <Word value={['butts', 'bottoms', 'touche', 'tushy', 'skipjack']} />
+        <Word 
+          value={[]} />
       </div>
       <div className="tiles-container">
         <LetterTiles />

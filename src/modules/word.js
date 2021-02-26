@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Word = (props) => {
-    const defaultWords = ['slangdown', 'snaglwond'];
+    const defaultWords = ['slangdown'];
     const givenAnswers = props.value.map((e,i) => {
             return (
                 <li className="word" key={i.toString()}>
