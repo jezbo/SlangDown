@@ -51,6 +51,7 @@ button:focus {
   justify-content: center;
   height: 10vh;
   width: 10vh;
+  padding: 0 0 0.5vh 0.5vh;
   transform: rotate(90deg);
   position: absolute;
 }
@@ -141,27 +142,32 @@ button:focus {
 /*---ENTERED ANSWERS---*/
 
 .word-container {
-  grid-area: 2/9/span 2/span 3;
+  grid-area: 1/11/span 2/span 1;
+  margin: 5vh 0 0 0;
+  padding-right: 6vh;
 }
 
-.word-container {
+.words {
   height: 22px;
   font-family: "Trebuchet MS";
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 150px;
   cursor: default;
-  background-color: #fdf9e2;
+  padding:0;;
   }
 
 .word {
   height: 20px;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100px;
   box-shadow: 0px 0.3px 0px 0px grey;
-  padding: 2px 15px;
+  padding: 0.5vh 0.5vh;
+  background-color: #fdf9e2;
+  box-shadow: 1px 1px gray;
 }
 
 .exit {
@@ -171,9 +177,9 @@ button:focus {
   align-items: center;
   justify-content: center;
   padding: 2px 8px;
-  text-align: center;
-  box-shadow: 0px 0.3px 0.3px 0px grey;
+  text-align: right;
   font-size: 12px;
+  background-color: #fdf9e2;
 }
 
 .exit:active {

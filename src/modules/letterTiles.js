@@ -18,8 +18,7 @@ const LetterTiles = (props) => {
 
     return(
         <div className="letterTiles-container">
-            {tiles
-            }
+            {tiles}
         </div>
     )
 }

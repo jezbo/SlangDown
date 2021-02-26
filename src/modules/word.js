@@ -1,15 +1,33 @@
 import React from 'react';
 
 const Word = (props) => {
-    return(
-       <div className="word-container" >
-            <p className="word" >
-                {props.value}
-            </p>
-            <p className="exit" onClick={props.onClick} >
-                x
-            </p>
-        </div> 
+    const defaultWords = ['slangdown', 'snaglwond'];
+    const givenAnswers = props.value.map((e,i) => {
+            return (
+                <li className="word" key={i.toString()}>
+                    {e}
+                    <button className="exit" >
+                        x
+                    </button>
+                </li>
+            ) 
+        })
+   
+    const defaultAnswers = defaultWords.map((e,i) => {
+            return (
+                <li className="word" key={i.toString()}>
+                    {e}
+                    <button className="exit" >
+                        x
+                    </button>
+                </li>
+            ) 
+        })
+
+    return (
+        <ul className="words" >
+            {props.value.length>0 ? givenAnswers : defaultAnswers}   
+        </ul> 
     )
     
 }
