@@ -1,11 +1,29 @@
 import React from 'react';
+import SingleTile from './singleTile';
 
-const Tile = (props) => {
+const Tiles = (props) => {
+    const tileContents = ["S","L","A","N","G","D","O","W","N"];
+    const selectLetters = () => {
+        if(props.letters===9) {
+            props.letters.forEach((e,i) => {
+                tileContents[i] = e;
+            })
+        }
+    }
+    selectLetters();
+
+    const tiles = 
+        tileContents.map((e,i) => {
+            return (
+                <SingleTile key={i.toString()} value={e} />
+            )
+        });
+
     return(
-        <button className="tile" onClick={props.onClick}>
-                {props.value}
-        </button>
+        <div className="letterTiles-container">
+            {tiles}
+        </div>
     )
 }
 
-export default Tile;
+export default Tiles; 
