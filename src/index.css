@@ -1,4 +1,8 @@
 /*---GENERAL STYLES---*/
+* {
+  border: 0;
+  margin: 0;  
+}
 
 body {
   margin: 0;
@@ -32,79 +36,81 @@ button:focus {
 }
 
 .grid-container{
+  height: 100vh;
+  width: 100vw;
   display: grid;
-  grid-template: repeat(6, 1fr)/repeat(11, 1fr);
+  grid-template: repeat(7, 1fr)/repeat(11, 1fr);
 }
 
 /*---MENU---*/
 
+.menu-container {
+  grid-area: 1/1/span 3/ span 3;
+}
+
 .menuButton {
-  grid-area: 1/1/span 1/ span 1;
-  margin: 6vh 0 0 7vh;
-  font-size: 4vh;
+  outline: none;
+  border: 0;
+  margin: 2vw 0 0 1.5vw;
+  font-size: 1.3vw;
   border-radius: 50%;
   justify-self: self-start;
-  background-color: #fdf9e2;
-  box-shadow: 0.3vh -0.3vh gray;
+  
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10vh;
-  width: 10vh;
-  padding: 0 0 0.5vh 0.5vh;
-  transform: rotate(90deg);
+  height: 2.5vw;
+  width: 2.5vw;
+  
   position: absolute;
 }
 
 .menuButton:active {
-  transform: scale3d(1.2, 1.2, 0.5) rotate(90deg);
-  box-shadow: 0.3vh -0.3vh rgba(255, 0, 0, 0.447);
+  transform: scale(1.2, 1.2) rotate(360deg);
+  box-shadow: 0.1vw -0.1vw rgba(255, 0, 0, 0.447);
   background-color: #fff7a0;
   color: red;
 }
 
 .menu-div {
-  width: 15vh;
-  position: relative;
-  width: calc(100/13)vh;
+  position: absolute;
+  width: 7vw;
 }
 
 .menu.inactive {
-  font-size: 0px;
+  font-size: 0vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 6vh 0 0 18vh; 
-  width: 25vh;
-  height: 0.7vh;
-  padding: 5vh;
+  margin: 1vw 0 0 2vw; 
+  width: 8vw;
+  height: 0.2vw;
+  padding: 1.5vw;
   text-align: left;
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-20px);
-  transition: 
-    opacity 0.4s ease, 
-    transform 0.4s ease, 
-    visibility 0.4s ease;  
+  transform: translateY(-1vw); 
 }
 
 .menu.active {
-  font-size: 2vh;
+  font-size: 0.85vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 6vh 0 0 18vh; 
-  width: 25vh;
-  height: 0.7vh;
-  padding: 5vh;
+  margin: 1.3vw 0 0 5vw; 
+  width: 8vw;
+  height: 0.2vw;
+  padding: 1.8vw;
   text-align: left;
-  box-shadow: 0.1vh 0.1vh gray;
+  box-shadow: 0.08vw 0.08vw rgba(255, 0, 0, 0.447);
   position: absolute;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  background-color: #fdf9e2;
+  background-color: #fff7a0;
+  color: red;
 }
 
 /*---TIMER---*/
@@ -117,22 +123,21 @@ button:focus {
 .timeLeft {
   display: flex;
   background-color: #fdf9e2;
-  box-shadow: 0.2vh 0.3vh gray;
+  box-shadow: 0.06vw 0.08vw gray;
   font-weight: bolder;
   font-size: 10vw;
   border: 1px #faf4d6 solid;
   border-radius: 50%;
-  height: 14vw;
-  width: 14vw;
+  height: 17vw;
+  width: 17vw;
   justify-content: center;
   align-items: center;
-  padding-left: 0.5vw;
-  padding-top: 0.5vw;
+  padding: 0.1vw 0.1vw 0 0.1vw;
 }
 
 .timerContainer {
   max-height: 15vw;
-  padding: 25px 25px;
+  padding: 0.5vw 0.5vw;
   background-color: #ffe3fa;
   display: flex;
   align-items: center;
@@ -143,49 +148,52 @@ button:focus {
 
 .word-container {
   grid-area: 1/11/span 2/span 1;
-  margin: 5vh 0 0 0;
-  padding-right: 6vh;
+  margin: 2vw 0 0 0;
+  padding-right: 2vw;
 }
 
 .words {
-  height: 22px;
+  height: 1.2vw;
+  width: 5vw;
   font-family: "Trebuchet MS";
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
   cursor: default;
-  padding:0;;
+  padding:0;
   }
 
 .word {
-  height: 20px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100px;
-  box-shadow: 0px 0.3px 0px 0px grey;
-  padding: 0.5vh 0.5vh;
+  height: 0.8vw;
+  width: 5vw;
+  box-shadow: 0.6vw 0.3vw grey;
+  padding: 0.2vw 0.2vw 0.2vw 0.5vw;
   background-color: #fdf9e2;
-  box-shadow: 1px 1px gray;
+  box-shadow: 0.05vw 0.05vw gray;
 }
 
 .exit {
-  width: 5px;
-  height: 20px;
+  margin-top: -0.16vw;
+  margin-right: -0.2vw; 
+  width: 1vw;
+  height: 1.2vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 8px;
+  padding: 0;
   text-align: right;
-  font-size: 12px;
+  font-size: 0.6vw;
   background-color: #fdf9e2;
+  box-shadow: 0.05vw 0.05vw grey;
 }
 
 .exit:active {
-  box-shadow: 1px 1px red;
-  background-color: #f0f0f0;
+  box-shadow: 0.05vw 0.05vw red;
+  background-color: #fff7a0;
   color: red;
+  transform: scale(1.3, 1.3);
 }
 
 /*---TILES---*/
@@ -195,32 +203,24 @@ button:focus {
   align-self: end;
 }
 
-.button {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  font-weight: normal;
-  color: #3b3640;
-  height: 10vh;
-  padding: 1vh 1.5vh;
-  border: none;
-  background-color: #f2f7f4;
-  box-shadow: 2vh 2vh #d1f7dd;
-  margin: 2vh 4vh;
-}
-
 .tile {
-  border: 0.3vh #f6ecab solid;
-  box-shadow: 0.5vh 0.6vh gray;
-  width: 15vh;
-  height: 15vh;
+  border: 0.1vw #f6ecab solid;
+  box-shadow: 0.25vw 0.25vw gray;
+  width: 5vw;
+  height: 5vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 14vh;
+  font-size: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 1vh;
   background-color: #fdf9e2;
+}
+
+.tile.active {
+  box-shadow: 0.5vh 0.6vh rgba(255, 0, 0, 0.447);
+  background-color: #fff7a0;
+  color: red;
 }
 
 .tile:active {
@@ -236,6 +236,36 @@ button:focus {
   justify-content: center;
 }
 
+/*---WORD CREATOR---*/
+
+.button-container {
+  grid-area: 7/6/span 1/ span 1;
+}
+
+.buttonContainer {
+  grid-area: 7/6/span 1/ span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5vh;
+}
+
+.button {
+  color: #3b3640;
+  height: 3vh;
+  padding: 0.8vh 1vh 2vh 1vh;
+  border: none;
+  background-color: #fdf9e2;
+  box-shadow: 0.1vh 0.1vh grey;
+  margin-top: 4vw;
+}
+
+.button:active {
+  background-color: #fff7a0;
+  color: red;
+  box-shadow: 0.1vh 0.1vh rgba(255, 0, 0, 0.447);
+  transform: scale(1.1, 1.1);
+}
 
 
 

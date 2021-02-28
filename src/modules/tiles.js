@@ -1,27 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import SingleTile from './singleTile';
 
 const Tiles = (props) => {
-    const [tileState, setTileState] = useState(false);
-
-    const onClick = (e) => {
-        setTileState(!tileState)
-    }
-
     const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
-        if(props.letters===9) {
+        if(props.letters && props.letters.length===9) {
             props.letters.forEach((e,i) => {
                 tileContents[i] = e;
             })
         }
     }
     selectLetters();
+
     const tiles = 
         tileContents.map((e,i) => {
             return (
-                <button className="tile" key={i.toString()} onClick={onClick}>
-                    {e}
-                </button>
+                <SingleTile key={i.toString()} value={e} />
             )
         });
 
@@ -32,4 +26,4 @@ const Tiles = (props) => {
     )
 }
 
-export default Tiles;
+export default Tiles; 

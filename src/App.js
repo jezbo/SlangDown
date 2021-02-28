@@ -9,7 +9,7 @@ import Tiles from './modules/Tiles';
 
 const App = () => {
   return(
-<div className="grid-container">
+    <div className="grid-container">
       <div className="menu-container">
         <Menu />
       </div>
@@ -23,6 +23,11 @@ const App = () => {
       <div className="tiles-container">
         <Tiles />
       </div>
+      <div className="wordCreator-container">
+
+      </div>
+      <div className="button-container"></div>
+        <Button value="Enter" />
     </div>
   )
 }
