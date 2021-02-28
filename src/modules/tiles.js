@@ -4,7 +4,7 @@ import SingleTile from './singleTile';
 const Tiles = (props) => {
     const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
-        if(props.letters && props.letters.length===9) {
+        if(props.letters.length===9) {
             props.letters.forEach((e,i) => {
                 tileContents[i] = e;
             })
