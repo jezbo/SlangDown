@@ -9,12 +9,27 @@ const Tiles = (props) => {
     const [word, setWord] = useState(newWord);
     const addLetter = (event) => {
         setWord([...word, event.target.value]);
-        console.log(newWord)
     }
+    
+    const removeLetter = (event, index) => {
+       setWord((prevState) => {
+           prevState.filter((element,i) => {
+               if(i!===index) {
+                   ;
+               }
+           })
+       })
+    }
+
     const selectedTiles = 
-        word.map((e,i) => {
+        word.map((e, i) => {
             return (
-                <BabyTile key={i.toString()} value={e} />
+                <BabyTile 
+                    value={e} 
+                    index={i} 
+                    removeLetter={removeLetter} 
+                    key={i.toString()} 
+                />
             )
         })
 
@@ -32,7 +47,11 @@ const Tiles = (props) => {
     const tiles = 
         tileContents.map((e,i) => {
             return (
-                <SingleTile key={i.toString()} value={e} addLetter={addLetter} />
+                <SingleTile 
+                    key={i.toString()} 
+                    value={e} 
+                    addLetter={addLetter} 
+                />
             )
         });
 

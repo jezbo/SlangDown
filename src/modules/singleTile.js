@@ -4,7 +4,8 @@ const SingleTile = (props) => {
     const [isActive, setIsActive] = useState(false);
     const handleEvent = (e) => {
         if(!isActive) props.addLetter(e);
-        setIsActive(!isActive);  
+        
+        setIsActive(true);  
     }
 
     return (
