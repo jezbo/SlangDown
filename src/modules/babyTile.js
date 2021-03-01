@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const BabyTile = (props) => {
-    const [isActive, setIsActive] = useState(true);
-    const [tileValue, setTitleValue] = useState(null);
-    const handleEvent = (e) => {
-
-    }
-    
     return (
-        <p className={`babyTile ${isActive ? "active" : "inactive"}`}>
+        <p className="babyTile">
             {props.value}
         </p>
     )

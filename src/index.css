@@ -197,10 +197,25 @@ button:focus {
 }
 
 /*---TILES---*/
-
 .tiles-container {
-  grid-area: 5/2/span 1/span 9;
-  align-self: end;
+  grid-area: 5/2/span 3/ span 9;
+  height: 100%;
+  width: 100%;
+}
+
+.gameTiles {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template: repeat(5, 1fr)/repeat(9, 1fr);
+  grid-area: 1/1/span 5/span 9;
+}
+
+.letterTiles-container {
+  grid-area: 1/1/span 2/span 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tile {
@@ -230,24 +245,32 @@ button:focus {
   transform: scale(1.1, 1.1);
 }
 
-.letterTiles-container {
+.babyTiles-container {
+  grid-area: 3/2/span 1/span 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.babyTile {
+  border: 0.1vw #f6ecab solid;
+  box-shadow: 0.25vw 0.25vw gray;
+  width: 3vw;
+  height: 3vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 1vh;
+  background-color: #fdf9e2;
 }
-
-/*---WORD CREATOR---*/
 
 .button-container {
-  grid-area: 7/6/span 1/ span 1;
-}
-
-.buttonContainer {
-  grid-area: 7/6/span 1/ span 1;
+  grid-area: 4/5/span 1/span 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: -5vh;
+  align-items: center;
 }
 
 .button {
@@ -259,15 +282,5 @@ button:focus {
   box-shadow: 0.1vh 0.1vh grey;
   margin-top: 4vw;
 }
-
-.button:active {
-  background-color: #fff7a0;
-  color: red;
-  box-shadow: 0.1vh 0.1vh rgba(255, 0, 0, 0.447);
-  transform: scale(1.1, 1.1);
-}
-
-
-
 
 

@@ -1,11 +1,8 @@
 import React from 'react';
-import Button from './modules/button';
 import Word from './modules/word';
 import Menu from './modules/menu';
 import Timer from './modules/timer';
-import Tiles from './modules/Tiles';
-
-
+import Tiles from './modules/tiles';
 
 const App = () => {
   return(
@@ -23,11 +20,6 @@ const App = () => {
       <div className="tiles-container">
         <Tiles />
       </div>
-      <div className="wordCreator-container">
-
-      </div>
-      <div className="button-container"></div>
-        <Button value="Enter" />
     </div>
   )
 }
