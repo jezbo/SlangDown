@@ -266,6 +266,15 @@ button:focus {
   background-color: #fdf9e2;
 }
 
+.babyTile:active {
+  box-shadow: 0.5vh 0.6vh rgba(255, 0, 0, 0.447);
+  background-color: #fff7a0;
+  color: red;
+  transform: scale(1.1, 1.1);
+}
+
+
+
 .button-container {
   grid-area: 4/5/span 1/span 1;
   display: flex;
