@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Button = (props) => {
-
+    const onClick = (e) => {
+        return
+    }
     return(
         <div className="buttonContainer">
-            <button className="button" onClick={props.onClick}>
-                <p>
+            <button className="button" onClick={onClick}>
                     {props.value}
-                </p>
             </button>
         </div>
     )
