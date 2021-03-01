@@ -16,7 +16,6 @@ const Tiles = (props) => {
        setWord((prevState) => prevState.filter((element,i) => i!==index))
     }
     
- 
     const selectedTiles = 
         word.map((e, i) => {
             return (
