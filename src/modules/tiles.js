@@ -42,7 +42,6 @@ const Tiles = (props) => {
         return change
        });
        setOriginIndex((prevState) => prevState.filter((element,i ) => i!==index))
-
     }
     
     const selectedTiles = 
