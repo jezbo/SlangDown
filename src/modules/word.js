@@ -6,7 +6,10 @@ const Word = (props) => {
             return (
                 <li className="word" key={i.toString()}>
                     {e}
-                    <button className="exit" >
+                    <button 
+                        className="exit" 
+                        onClick={props.remove}    
+                    >
                         x
                     </button>
                 </li>

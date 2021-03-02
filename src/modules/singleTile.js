@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const SingleTile = (props) => {
     const handleEvent = (e) => {
@@ -6,7 +6,11 @@ const SingleTile = (props) => {
     }
 
     return (
-        <button className={`tile ${props.switch ? 'active' : 'inactive'}`} value={props.value.toLowerCase()} onClick={handleEvent}>
+        <button 
+            className={`tile ${props.switch ? 'active' : 'inactive'}`} 
+            value={props.value.toLowerCase()} 
+            onClick={handleEvent}
+        >
             {props.value}
         </button> 
     )

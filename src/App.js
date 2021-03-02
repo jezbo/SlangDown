@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Word from './modules/word';
 import Menu from './modules/menu';
 import Timer from './modules/timer';
 import Tiles from './modules/tiles';
 
 const App = () => {
+  const [savedWords, setSavedWords] = useState([]);
+  const saveWord=(word)=>{
+    const first = savedWords.includes(word);
+    if(!first) setSavedWords((prev) => [...prev, word])
+}
+
+
   return(
     <div className="grid-container">
       <div className="menu-container">
@@ -15,10 +22,12 @@ const App = () => {
       </div>
       <div className="word-container">
         <Word 
-          value={[]} />
+          value={savedWords} />
       </div>
       <div className="tiles-container">
-        <Tiles />
+        <Tiles  
+          saveWord={saveWord}
+        />
       </div>
     </div>
   )

@@ -4,7 +4,6 @@ import BabyTile from './babyTile';
 import Button from './button';
 
 const Tiles = (props) => {
-    //BabyTiles
     const newWord = [];
     const [word, setWord] = useState(newWord)
     const [originIndex, setOriginIndex] = useState([]);
@@ -43,6 +42,16 @@ const Tiles = (props) => {
        });
        setOriginIndex((prevState) => prevState.filter((element,i ) => i!==index))
     }
+
+    const saveWord = () => {
+        if(word.length>0) {
+            let savedWord = word.join('');
+            props.saveWord(savedWord);
+            setWord([]);
+            setOriginIndex([]);
+            setBigTileState(bigTileSwitches);
+        } 
+    }
     
     const selectedTiles = 
         word.map((e, i) => {
@@ -57,7 +66,6 @@ const Tiles = (props) => {
             )
         })
 
-    //BigTiles
     const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
         if(props.letters===9) {
@@ -90,7 +98,10 @@ const Tiles = (props) => {
             {selectedTiles}
         </div>
         <div className="button-container">
-            <Button value="Enter" />
+            <Button 
+                value="Enter" 
+                onClick={saveWord}
+            />
         </div>
     </div>
        
