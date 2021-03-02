@@ -4,7 +4,6 @@ import BabyTile from './babyTile';
 import Button from './button';
 
 const Tiles = (props) => {
-    //BabyTiles
     const newWord = [];
     const [word, setWord] = useState(newWord)
     const [originIndex, setOriginIndex] = useState([]);
@@ -57,7 +56,6 @@ const Tiles = (props) => {
             )
         })
 
-    //BigTiles
     const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
         if(props.letters===9) {
