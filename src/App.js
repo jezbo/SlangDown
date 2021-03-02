@@ -7,7 +7,8 @@ import Tiles from './modules/tiles';
 const App = () => {
   const [savedWords, setSavedWords] = useState([]);
   const saveWord=(word)=>{
-    setSavedWords((prev) => [...prev, word])
+    const first = savedWords.includes(word);
+    if(!first) setSavedWords((prev) => [...prev, word])
 }
 
 
