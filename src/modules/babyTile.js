@@ -2,7 +2,7 @@ import React from 'react';
 
 const BabyTile = (props) => {
     const clickHandle = (event) => {
-        props.removeLetter(event, props.index)
+        props.removeLetter(event, props.index, props.originIndex)
     }
 
     return (
