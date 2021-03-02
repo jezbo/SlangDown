@@ -7,13 +7,38 @@ const Tiles = (props) => {
     //BabyTiles
     const newWord = [];
     const [word, setWord] = useState(newWord);
+    const bigTileSwitches = {
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+        5: false,
+        6: false,
+        7: false,
+        8: false,
+        9: false,
+    }
+    const [bigTileState, setBigTileState] = useState(bigTileSwitches);
 
-    const addLetter = (event) => {
+    const addLetter = (event, index) => {
         setWord([...word, event.target.value]);
+        setBigTileState((prevState) => {
+            let change = {...prevState};
+            change[index]=true;
+            console.log(change)
+            console.log(bigTileState)
+            return change
+            
+        })
     }
     
     const removeLetter = (event, index) => {
-       setWord((prevState) => prevState.filter((element,i) => i!==index))
+       setWord((prevState) => prevState.filter((element,i) => i!==index));
+       setBigTileState((prevState) => {
+        let change = {...prevState};
+        change[index]=false;
+        return change
+       });
     }
     
     const selectedTiles = 
@@ -45,7 +70,9 @@ const Tiles = (props) => {
                 <SingleTile 
                     key={i.toString()} 
                     value={e} 
-                    addLetter={addLetter} 
+                    addLetter={addLetter}
+                    index={i} 
+                    switch={bigTileState[i]}
                 />
             )
         });
