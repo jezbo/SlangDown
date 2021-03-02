@@ -42,6 +42,16 @@ const Tiles = (props) => {
        });
        setOriginIndex((prevState) => prevState.filter((element,i ) => i!==index))
     }
+
+    const saveWord = () => {
+        if(word.length>0) {
+            let savedWord = word.join('');
+            props.saveWord(savedWord);
+            setWord([]);
+            setOriginIndex([]);
+            setBigTileState(bigTileSwitches);
+        } 
+    }
     
     const selectedTiles = 
         word.map((e, i) => {
@@ -88,7 +98,10 @@ const Tiles = (props) => {
             {selectedTiles}
         </div>
         <div className="button-container">
-            <Button value="Enter" />
+            <Button 
+                value="Enter" 
+                onClick={saveWord}
+            />
         </div>
     </div>
        
