@@ -6,8 +6,10 @@ import Button from './button';
 const Tiles = (props) => {
     //BabyTiles
     const newWord = [];
-    const [word, setWord] = useState(newWord);
+    const [word, setWord] = useState(newWord)
+    const [originIndex, setOriginIndex] = useState([]);
     const bigTileSwitches = {
+        0: false,
         1: false,
         2: false,
         3: false,
@@ -16,12 +18,12 @@ const Tiles = (props) => {
         6: false,
         7: false,
         8: false,
-        9: false,
     }
     const [bigTileState, setBigTileState] = useState(bigTileSwitches);
 
     const addLetter = (event, index) => {
         setWord([...word, event.target.value]);
+        setOriginIndex([...originIndex, index])
         setBigTileState((prevState) => {
             let change = {...prevState};
             change[index]=true;
@@ -32,13 +34,15 @@ const Tiles = (props) => {
         })
     }
     
-    const removeLetter = (event, index) => {
+    const removeLetter = (event, index, origin) => {
        setWord((prevState) => prevState.filter((element,i) => i!==index));
        setBigTileState((prevState) => {
         let change = {...prevState};
-        change[index]=false;
+        change[origin]=false;
         return change
        });
+       setOriginIndex((prevState) => prevState.filter((element,i ) => i!==index))
+
     }
     
     const selectedTiles = 
@@ -46,7 +50,8 @@ const Tiles = (props) => {
             return (
                 <BabyTile 
                     value={e} 
-                    index={i} 
+                    index={i}
+                    originIndex={originIndex[i]} 
                     removeLetter={removeLetter} 
                     key={i.toString()} 
                 />
