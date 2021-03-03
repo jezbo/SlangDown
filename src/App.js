@@ -12,6 +12,15 @@ const App = () => {
     if(!first) setSavedWords((prev) => [...prev, word])
 }
 
+const removeWord = (index) => {
+  setSavedWords((prev) => prev.filter((e,i) => index!==i));
+}
+
+const answersProperties = {
+  removeWord: removeWord,
+}
+const answers = iterateComponent(Word,savedWords,answersProperties)
+
 // const remover = (index) => {
 //   setSavedWords((prev) => prev.filter((e,i) => i!==index))  
 // }
@@ -25,11 +34,9 @@ const App = () => {
       <div className="timer-container">
         <Timer />
       </div>
-      <div className="word-container">
-        <Word 
-          value={savedWords} 
-        />
-      </div>
+      <ul className="word-container"> 
+        {answers} 
+      </ul>
       <div className="tiles-container">
         <Tiles  
           saveWord={saveWord}
