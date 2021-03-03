@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SingleTile from './singleTile';
 import BabyTile from './babyTile';
 import Button from './button';
+import iterateComponent from './iterateComponent'
 
 const Tiles = (props) => {
     const newWord = [];
@@ -53,18 +54,11 @@ const Tiles = (props) => {
         } 
     }
     
-    const selectedTiles = 
-        word.map((e, i) => {
-            return (
-                <BabyTile 
-                    value={e} 
-                    index={i}
-                    originIndex={originIndex[i]} 
-                    removeLetter={removeLetter} 
-                    key={i.toString()} 
-                />
-            )
-        })
+    const babyTilesProps = {
+        originIndexes: originIndex,
+        removeLetter:  removeLetter
+    }
+    const babyTiles = iterateComponent(BabyTile,word,babyTilesProps)
 
     const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
@@ -76,18 +70,11 @@ const Tiles = (props) => {
     }
     selectLetters();
 
-    const tiles = 
-        tileContents.map((e,i) => {
-            return (
-                <SingleTile 
-                    key={i.toString()} 
-                    value={e} 
-                    addLetter={addLetter}
-                    index={i} 
-                    switch={bigTileState[i]}
-                />
-            )
-        });
+    const tilesProps = {
+        addLetter: addLetter,
+        switch: bigTileState
+    }
+    const tiles = iterateComponent(SingleTile,tileContents,tilesProps);
 
     return(
     <div className="gameTiles">
@@ -95,7 +82,7 @@ const Tiles = (props) => {
             {tiles}
         </div>
         <div className="babyTiles-container">
-            {selectedTiles}
+            {babyTiles}
         </div>
         <div className="button-container">
             <Button 

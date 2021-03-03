@@ -1,36 +1,20 @@
 import React from 'react';
 
 const Word = (props) => {
-    const defaultWords = ['slangdown'];
-    const givenAnswers = props.value.map((e,i) => {
-            return (
-                <li className="word" key={i.toString()}>
-                    {e}
-                    <button 
-                        className="exit" 
-                        onClick={props.remove}    
-                    >
-                        x
-                    </button>
-                </li>
-            ) 
-        })
-   
-    const defaultAnswers = defaultWords.map((e,i) => {
-            return (
-                <li className="word" key={i.toString()}>
-                    {e}
-                    <button className="exit" >
-                        x
-                    </button>
-                </li>
-            ) 
-        })
+    const handleClick = (event) => {
+        props.properties.removeWord(props.index);
+    }
 
     return (
-        <ul className="words" >
-            {props.value.length>0 ? givenAnswers : defaultAnswers}   
-        </ul> 
+        <li className="word">
+            {props.value}
+            <button 
+                className="exit"  
+                onClick={handleClick}
+            >
+                x
+            </button>
+        </li> 
     )
     
 }
