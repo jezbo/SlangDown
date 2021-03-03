@@ -2,13 +2,13 @@ import React from 'react';
 
 const Word = (props) => {
     const defaultWords = ['slangdown'];
+
     const givenAnswers = props.value.map((e,i) => {
             return (
                 <li className="word" key={i.toString()}>
                     {e}
                     <button 
-                        className="exit" 
-                        onClick={props.remove}    
+                        className="exit"  
                     >
                         x
                     </button>
