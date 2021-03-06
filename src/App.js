@@ -3,27 +3,40 @@ import Word from './modules/word';
 import Menu from './modules/menu';
 import Timer from './modules/timer';
 import Tiles from './modules/tiles';
+import BarTimer from './modules/barTimer'
 import iterateComponent from './modules/iterateComponent';
+import veracityOfDefinitions from'./modules/wordVeracity';
 
 const App = () => {
   const [savedWords, setSavedWords] = useState([]);
-  const saveWord=(word)=>{
+  const [wordVeracity,setWordVeracity] = useState([])
+  
+
+
+  const saveWord = async (word) => {
     const first = savedWords.includes(word);
     if(!first) setSavedWords((prev) => [...prev, word])
-}
+    const veracity = await veracityOfDefinitions(word);
+    setWordVeracity((prev) => [...prev, veracity]);
+  }
 
-const removeWord = (index) => {
-  setSavedWords((prev) => prev.filter((e,i) => index!==i));
-}
+  // const veracity = async (word) => {
+  //   setWordVeracity((prev) => [...prev, veracityOfDefinitions(word)])
+  // }
 
-const answersProperties = {
-  removeWord: removeWord,
-}
-const answers = iterateComponent(Word,savedWords,answersProperties)
+  const removeWord = (index) => {
+    setSavedWords((prev) => prev.filter((e,i) => index!==i));
+  }
 
-// const remover = (index) => {
-//   setSavedWords((prev) => prev.filter((e,i) => i!==index))  
-// }
+  const answersProperties = {
+    removeWord: removeWord,
+    veracity: wordVeracity
+  }
+  const answers = iterateComponent(Word,savedWords,answersProperties)
+
+  // const remover = (index) => {
+  //   setSavedWords((prev) => prev.filter((e,i) => i!==index))  
+  // }
 
 
   return(
@@ -34,6 +47,9 @@ const answers = iterateComponent(Word,savedWords,answersProperties)
       <div className="timer-container">
         <Timer />
       </div>
+     
+        <BarTimer />
+     
       <ul className="word-container"> 
         {answers} 
       </ul>

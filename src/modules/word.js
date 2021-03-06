@@ -1,19 +1,20 @@
 import React from 'react';
 
 const Word = (props) => {
-    const handleClick = (event) => {
-        props.properties.removeWord(props.index);
+    const veracity = props.properties.veracity[props.index];
+    const style = {
+        backgroundColor : veracity===true ?  "#d6fec2" : "#fcacac",
+        color: veracity ? "#fffed1" : "#fffed1",
     }
 
+   /* const handleClick = (event) => {
+        props.properties.removeWord(props.index);
+    }
+    */
+
     return (
-        <li className="word">
+        <li className='word' style={style}>
             {props.value}
-            <button 
-                className="exit"  
-                onClick={handleClick}
-            >
-                x
-            </button>
         </li> 
     )
     
