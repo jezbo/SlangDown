@@ -175,6 +175,15 @@ button:focus {
   box-shadow: 0.05vw 0.05vw gray;
 }
 
+.word.correct {
+  background-color: #d6fec2;
+}
+
+.word.wrong {
+  background-color: #1d1916;
+  color: rgb(237, 237, 237);
+}
+
 .exit {
   margin-top: -0.2vw;
   margin-right: -0.2vw; 
