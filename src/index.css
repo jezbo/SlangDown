@@ -315,4 +315,20 @@ button:focus {
   transform: scale(1.1, 1.1);
 }
 
+/*---BAR TIMER---*/
+
+.barTimer {
+  height: 5px;
+  width: 50vw;
+  background: linear-gradient(to bottom, red, #900);
+  margin: 10px 0 0 10px;
+  animation: barTimer calc(var(--duration) * 1s) steps(var(--duration)) forwards;
+  transform-origin: left center;
+}
+
+@keyframes barTimer {
+  to {
+    transform: scaleX(0);
+  }
+}
 

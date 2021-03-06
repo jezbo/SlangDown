@@ -3,6 +3,7 @@ import Word from './modules/word';
 import Menu from './modules/menu';
 import Timer from './modules/timer';
 import Tiles from './modules/tiles';
+import BarTimer from './modules/barTimer'
 import iterateComponent from './modules/iterateComponent';
 import veracityOfDefinitions from'./modules/wordVeracity';
 
@@ -46,6 +47,9 @@ const App = () => {
       <div className="timer-container">
         <Timer />
       </div>
+     
+        <BarTimer />
+     
       <ul className="word-container"> 
         {answers} 
       </ul>
