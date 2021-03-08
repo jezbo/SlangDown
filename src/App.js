@@ -48,7 +48,7 @@ const App = () => {
         <Timer />
       </div>
      
-        <BarTimer />
+        <BarTimer time={30} />
      
       <ul className="word-container"> 
         {answers} 

@@ -55,8 +55,6 @@ button:focus {
   font-size: 1.3vw;
   border-radius: 50%;
   justify-self: self-start;
-  
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,8 +114,9 @@ button:focus {
 /*---TIMER---*/
 
 .timer-container {
-  grid-area: 2/5/span 3/span 3;
-  align-self: start;
+  grid-area: 1/5/span 4/span 3;
+  margin: 2vh 0 0 0;
+  align-self: center;
 }
 
 .timeLeft {
@@ -318,8 +317,12 @@ button:focus {
 /*---BAR TIMER---*/
 
 .barTimer {
+  grid-area: 4/2/span 1/ span 9;
+  align-self: end;
+  justify-self: center;
+  display: flex;
   height: 5px;
-  width: 50vw;
+  width:65%;
   background: linear-gradient(to bottom, red, #900);
   margin: 10px 0 0 10px;
   animation: barTimer calc(var(--duration) * 1s) steps(var(--duration)) forwards;
