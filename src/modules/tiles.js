@@ -4,10 +4,10 @@ import BabyTile from './babyTile';
 import Button from './button';
 import iterateComponent from './iterateComponent'
 
+
+
 const Tiles = (props) => {
-    const newWord = [];
-    const [word, setWord] = useState(newWord)
-    const [originIndex, setOriginIndex] = useState([]);
+    //******************************GLOBAL VARIABLES***********************************
     const bigTileSwitches = {
         0: false,
         1: false,
@@ -19,7 +19,18 @@ const Tiles = (props) => {
         7: false,
         8: false,
     }
+
+    const newWord = [];
+
+    const tileContents = ["S","L","A","N","G","D","O","W","N"];
+
+
+    //****************************STATE DECLARATIONS***********************************
     const [bigTileState, setBigTileState] = useState(bigTileSwitches);
+    const [word, setWord] = useState(newWord)
+    const [originIndex, setOriginIndex] = useState([]);
+
+    //*****************************CALLBACK FUNCTIONS**********************************
 
     const addLetter = (event, index) => {
         setWord([...word, event.target.value]);
@@ -27,10 +38,7 @@ const Tiles = (props) => {
         setBigTileState((prevState) => {
             let change = {...prevState};
             change[index]=true;
-            console.log(change)
-            console.log(bigTileState)
-            return change
-            
+            return change;
         })
     }
     
@@ -44,7 +52,8 @@ const Tiles = (props) => {
        setOriginIndex((prevState) => prevState.filter((element,i ) => i!==index))
     }
 
-    const saveWord = () => {
+    const handleClick = () => {
+        //*********ADD WORD***********
         if(word.length>0) {
             let savedWord = word.join('');
             props.saveWord(savedWord);
@@ -52,17 +61,12 @@ const Tiles = (props) => {
             setOriginIndex([]);
             setBigTileState(bigTileSwitches);
         } 
+        //*******START/RESTART GAME*********
+        
     }
-    
-    const babyTilesProps = {
-        originIndexes: originIndex,
-        removeLetter:  removeLetter
-    }
-    const babyTiles = iterateComponent(BabyTile,word,babyTilesProps)
 
-    const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
-        if(props.letters===9) {
+        if(props.letters && props.letters.length>0) {
             props.letters.forEach((e,i) => {
                 tileContents[i] = e;
             })
@@ -70,11 +74,34 @@ const Tiles = (props) => {
     }
     selectLetters();
 
+    //******************************BUTTON FUNCTIONS*********************************
+
+    const buttonFunctions = () => {
+        
+    }
+    
+
+    //***********************************PROPS***************************************
+   
     const tilesProps = {
         addLetter: addLetter,
         switch: bigTileState
     }
+    
+    const babyTilesProps = {
+        originIndexes: originIndex,
+        removeLetter:  removeLetter
+    }
+
+    //******************************ITERATE COMPONENTS************************************
+
     const tiles = iterateComponent(SingleTile,tileContents,tilesProps);
+    const babyTiles = iterateComponent(BabyTile,word,babyTilesProps)
+
+   
+
+   //**************************************JSX********************************************  
+    
 
     return(
     <div className="gameTiles">
@@ -86,8 +113,9 @@ const Tiles = (props) => {
         </div>
         <div className="button-container">
             <Button 
-                value="Enter" 
-                onClick={saveWord}
+                gameState={props.gameState}
+                value={props.gameState==='start' ? 'Start' : (props.gameState==='middle' ? 'Submit' : 'Restart')} 
+                onClick={handleClick}
             />
         </div>
     </div>
