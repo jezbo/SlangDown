@@ -9,11 +9,14 @@ body {
   font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffe3fa56;
+  background-image: url('https://image.freepik.com/free-photo/shattered-brick-wall-distnace_1194-7503.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: default;
 }
 
 button {
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   margin: 0;
   text-decoration: none;
@@ -27,7 +30,7 @@ button {
 
 button:hover,
 button:focus {
-  background: #fdf9e2;
+  background: #ffffff00;
 }
 
 button:focus {
@@ -49,7 +52,8 @@ button:focus {
 }
 
 .menuButton {
-  outline: none;
+  background-color: black;
+  outline: 2px ;
   border: 0;
   margin: 2vw 0 0 1.5vw;
   font-size: 1.3vw;
@@ -60,14 +64,13 @@ button:focus {
   justify-content: center;
   height: 2.5vw;
   width: 2.5vw;
-  
   position: absolute;
 }
 
 .menuButton:active {
   transform: scale(1.2, 1.2) rotate(360deg);
   box-shadow: 0.1vw -0.1vw rgba(255, 0, 0, 0.447);
-  background-color: #fff7a0;
+  background-color: #fff7a000;
   color: red;
 }
 
@@ -107,7 +110,7 @@ button:focus {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  background-color: #fff7a0;
+  background-color: #fff7a000;
   color: red;
 }
 
@@ -156,14 +159,12 @@ button:focus {
 .score {
   display: flex;
   color: rgba(255, 0, 0, 0.639);
-  background-color: #fff7a09c;;
-  box-shadow: 0.1vw 0.2vw rgba(255, 0, 0, 0.447);
   font-weight: bolder;
-  font-size: 6vw;
-  border: 1px #faf4d6 solid;
+  font-size: 8vw;
+  border: 3vw rgba(255, 255, 255, 0.459) solid;
   border-radius: 50%;
-  height: 17vw;
-  width: 17vw;
+  height: 15vw;
+  width: 15vw;
   justify-content: center;
   align-items: center;
   padding: 0.1vw 0.1vw 0 0.1vw;
@@ -196,17 +197,8 @@ button:focus {
   box-shadow: 0.6vw 0.3vw grey;
   margin: 0.4vh 0;
   padding: 0.2vw 0.2vw 0.2vw 0.5vw;
-  background-color: #fdf9e2;
-  box-shadow: 0.05vw 0.05vw gray;
-}
-
-.word.correct {
-  background-color: #d6fec2;
-}
-
-.word.wrong {
-  background-color: #1d1916;
-  color: rgb(237, 237, 237);
+  background-color: rgba(255, 255, 255, 0.459);
+  box-shadow: 0.05vw 0.05vw rgb(128, 128, 128);
 }
 
 .exit {
@@ -254,7 +246,7 @@ button:focus {
 }
 
 .tile {
-  border: 0.1vw #f6ecab solid;
+  border: 0.1vw white solid;
   box-shadow: 0.25vw 0.25vw gray;
   width: 5vw;
   height: 5vw;
@@ -264,12 +256,12 @@ button:focus {
   align-items: center;
   justify-content: center;
   margin: 0 1vh;
-  background-color: #fdf9e2;
+  
 }
 
 .tile.active {
   box-shadow: 0.5vh 0.6vh rgba(255, 0, 0, 0.447);
-  background-color: #fff7a0;
+  background-color: #fff7a06b;
   color: red;
 }
 
@@ -288,8 +280,8 @@ button:focus {
 }
 
 .babyTile {
-  border: 0.1vw #f6ecab solid;
-  box-shadow: 0.25vw 0.25vw gray;
+  border: 0.1vw #ffffff solid;
+  box-shadow: 0.13vw 0.13vw rgb(199, 249, 189);
   width: 3vw;
   height: 3vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -298,7 +290,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   margin: 0 1vh;
-  background-color: #fdf9e2;
+  background-color: #fff7a06b;
 }
 
 .babyTile:active {
@@ -319,21 +311,22 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:  #4f4c4c;
+  color:  #373737;
   height: 4vh;
   width: 9vh;
   padding: 1.8vh 1vh 2vh 1vh;
   border: none;
-  background-color: #fdf9e2;
+  background-color: #fdf9e200;
   box-shadow: 0.1vh 0.1vh grey;
   margin-top: 4vw;
-  font-family: "Trebuchet MS";
-  font-weight: 400;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1vw;
+  font-weight: bolder;
 }
 
 .button:active {
-  box-shadow: 0.5vh 0.6vh rgba(255, 0, 0, 0.447);
-  background-color: #fff7a0;
+  box-shadow: 0.3vh 0.4vh rgba(255, 0, 0, 0.447);
+  background-color: #fff7a000;
   color: red;
   transform: scale(1.1, 1.1);
 }

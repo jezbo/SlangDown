@@ -8,13 +8,13 @@ const DropDownMenu = (props) => {
         paddingTop : "0.3vw",
         paddingRight: "0.25vw",
         color: "red",
-        backgroundColor: "#fff7a0",
+        backgroundColor: "rgba(0, 0, 0, 0)",
     }
     const inactiveStyle = {
         transform: "rotate(90deg)",
         boxShadow: "0.1vw -0.1vw gray",
         padding: "0 0 0.2vw 0.2vw",
-        backgroundColor: "#fdf9e2",
+        backgroundColor: "rgba(0, 0, 0, 0)",
     }
     const [isActive, setIsActive] = useState(false);
     const dropdownRef = useRef(null);
