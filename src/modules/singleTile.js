@@ -8,7 +8,7 @@ const SingleTile = (props) => {
     return (
         <button 
             className={`tile ${props.properties.switch[props.index] ? 'active' : 'inactive'}`} 
-            value={props.value.toLowerCase()} 
+            value={props.value ? props.value.toLowerCase() : props.value} 
             onClick={handleEvent}
         >
             {props.value}

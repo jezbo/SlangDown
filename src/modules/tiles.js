@@ -62,7 +62,7 @@ const Tiles = (props) => {
 
     const tileContents = ["S","L","A","N","G","D","O","W","N"];
     const selectLetters = () => {
-        if(props.letters===9) {
+        if(props.letters && props.letters.length>0) {
             props.letters.forEach((e,i) => {
                 tileContents[i] = e;
             })

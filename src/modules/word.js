@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Word = (props) => {
     const veracity = props.properties.veracity[props.index];

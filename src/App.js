@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Word from './modules/word';
 import Menu from './modules/menu';
 import Score from './modules/score';
@@ -6,15 +6,21 @@ import Tiles from './modules/tiles';
 import BarTimer from './modules/barTimer'
 import iterateComponent from './modules/iterateComponent';
 import veracityOfDefinitions from'./modules/wordVeracity';
+import chooseLetters from './modules/chooseLetters';
 
 const App = () => {
 
 //*********************************STATE DECLARATIONS***********************************
-  const [letters,setLetters] = useState([]);
+  const [letters,setLetters] = useState(null);
   const [score, setScore] = useState(0);
   const [savedWords, setSavedWords] = useState([]);
   const [wordVeracity,setWordVeracity] = useState([])
-  
+
+//***********************************CHOOSE LETTERS*************************************
+  useEffect(() => {
+    const selectedLetters = chooseLetters(9);
+    setLetters(selectedLetters);
+  }, [])
 
 //*******************************SCORE FUNCTION*****************************************
 
@@ -61,6 +67,7 @@ const scoreFunction = (points) => {
       </ul>
       <div className="tiles-container">
         <Tiles  
+          letters={letters}
           saveWord={saveWord}
         />
       </div>
