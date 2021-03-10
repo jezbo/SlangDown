@@ -38,9 +38,19 @@ button:focus {
   outline-offset: -4px;
 }
 
+/*
 .grid-container{
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template: repeat(7, 1fr)/repeat(11, 1fr);
+}
+*/
+
+/*---STARTING PAGE---*/
+.start-grid {
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template: repeat(7, 1fr)/repeat(11, 1fr);
 }
@@ -112,38 +122,6 @@ button:focus {
   transform: translateY(0);
   background-color: #fff7a000;
   color: red;
-}
-
-/*---TIMER---*/
-
-.timer-container {
-  grid-area: 1/5/span 4/span 3;
-  margin: 2vh 0 0 0;
-  align-self: center;
-}
-
-.timeLeft {
-  display: flex;
-  background-color: #fdf9e2;
-  box-shadow: 0.06vw 0.08vw gray;
-  font-weight: bolder;
-  font-size: 10vw;
-  border: 1px #faf4d6 solid;
-  border-radius: 50%;
-  height: 17vw;
-  width: 17vw;
-  justify-content: center;
-  align-items: center;
-  padding: 0.1vw 0.1vw 0 0.1vw;
-}
-
-.timerContainer {
-  max-height: 15vw;
-  padding: 0.5vw 0.5vw;
-  background-color: #ffe3fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /*---SCORE---*/
