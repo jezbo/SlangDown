@@ -22,7 +22,8 @@ const Tiles = (props) => {
 
     const newWord = [];
 
-    const tileContents = ["S","L","A","N","G","D","O","W","N"];
+    let tileContents = ["S","L","A","N","G","D","O","W","N"];
+    const gameOver = ["G","A","M","E","O","V","E","R","!"];
 
 
     //****************************STATE DECLARATIONS***********************************
@@ -66,7 +67,8 @@ const Tiles = (props) => {
     }
 
     const selectLetters = () => {
-        if(props.letters && props.letters.length>0) {
+        if(props.gameState==='end') tileContents=gameOver;
+        else if(props.letters && props.letters.length>0) {
             props.letters.forEach((e,i) => {
                 tileContents[i] = e;
             })
