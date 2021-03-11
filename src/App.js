@@ -10,7 +10,7 @@ import EndPage from './modules/endPage';
 const App = () => {
 
 //*********************************STATE DECLARATIONS***********************************
-  const [gameState, setGameState] = useState('end');
+  const [gameState, setGameState] = useState('start');
   const [letters,setLetters] = useState(null);
   const [score, setScore] = useState(0);
   const [savedWords, setSavedWords] = useState([]);
@@ -26,6 +26,8 @@ const App = () => {
     const timer = setTimeout(timeoutCallback, (time*1000));
   }
   const startGame = () => {
+    const selectedLetters = chooseLetters(9);
+    setLetters(selectedLetters);
     setGameState('middle');
     gameTimer();
   }
@@ -35,11 +37,6 @@ const App = () => {
     else if(gameState==='middle') setGameState('end');
     else if (gameState==='end') startGame(); 
   }
-//***********************************HOOKS*************************************
-  useEffect(() => {
-    const selectedLetters = chooseLetters(9);
-    setLetters(selectedLetters);
-  }, [])
 
 //*******************************SCORE FUNCTION*****************************************
 
