@@ -17,11 +17,23 @@ const App = () => {
   const [wordVeracity,setWordVeracity] = useState([]);
   const [time, setTime] = useState(90)
 
-//****************************GAME STATE FUNCTION**************************************
+//****************************GAME STATE FUNCTIONS**************************************
+  const gameTimer = () => {
+    const timeoutCallback = () => {
+      setGameState('end');
+      clearTimeout(timer);
+    }
+    const timer = setTimeout(timeoutCallback, (time*1000));
+  }
+  const startGame = () => {
+    setGameState('middle');
+    gameTimer();
+  }
+
   const manageGameState = () => {
-    if(gameState==='start') setGameState('middle');
+    if(gameState==='start') startGame();
     else if(gameState==='middle') setGameState('end');
-    else if (gameState==='end') setGameState('middle'); 
+    else if (gameState==='end') startGame(); 
   }
 //***********************************HOOKS*************************************
   useEffect(() => {
