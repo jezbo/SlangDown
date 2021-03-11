@@ -1,33 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import Word from './modules/word';
-import Menu from './modules/menu';
-import Score from './modules/score';
-import Tiles from './modules/tiles';
-import BarTimer from './modules/barTimer'
 import iterateComponent from './modules/iterateComponent';
 import veracityOfDefinitions from'./modules/wordVeracity';
 import chooseLetters from './modules/chooseLetters';
+import StartPage from './modules/startPage';
+import GamePage from './modules/gamePage';
+import EndPage from './modules/endPage';
 
 const App = () => {
 
 //*********************************STATE DECLARATIONS***********************************
-  const [gameState, setGameState] = useState('middle');
+  const [gameState, setGameState] = useState('start');
   const [letters,setLetters] = useState(null);
   const [score, setScore] = useState(0);
   const [savedWords, setSavedWords] = useState([]);
-  const [wordVeracity,setWordVeracity] = useState([])
+  const [wordVeracity,setWordVeracity] = useState([]);
+  const [time, setTime] = useState(90)
 
-//****************************GAME STATE FUNCTION**************************************
-  const manageGameState = () => {
-    if(gameState==='start') setGameState('middle');
-    else if(gameState==='middle') setGameState('end');
-    else if (gameState==='end') setGameState('middle'); 
+//****************************GAME STATE FUNCTIONS**************************************
+  const gameTimer = () => {
+    const timeoutCallback = () => {
+      setGameState('end');
+      clearTimeout(timer);
+    }
+    const timer = setTimeout(timeoutCallback, (time*1000));
   }
-//***********************************HOOKS*************************************
-  useEffect(() => {
+  const startGame = () => {
     const selectedLetters = chooseLetters(9);
     setLetters(selectedLetters);
-  }, [])
+    setGameState('middle');
+    gameTimer();
+  }
+
+  const manageGameState = () => {
+    if(gameState==='start') startGame();
+    else if(gameState==='middle') setGameState('end');
+    else if (gameState==='end') startGame(); 
+  }
 
 //*******************************SCORE FUNCTION*****************************************
 
@@ -58,32 +67,26 @@ const scoreFunction = (points) => {
   }
   const answers = iterateComponent(Word,savedWords,answersProperties)
 
+//*************************************PROPS********************************************* 
+const properties = {
+  score: score,
+  time: time,
+  answers: answers,
+  gameState: gameState,
+  saveWord: saveWord,
+  manageGameState: manageGameState,
+  letters: letters,
+}
 
 //*********************************COMPONENTS********************************************
-  return(
-    <div className="grid-container">
-      <div className="menu-container">
-        <Menu />
-      </div>
-      <div className="score-container">
-        <Score value={score} />
-      </div>
-     
-        <BarTimer time={30} />
-     
-      <ul className="word-container"> 
-        {answers} 
-      </ul>
-      <div className="tiles-container">
-        <Tiles  
-          letters={letters}
-          saveWord={saveWord}
-          manageGameState={manageGameState}
-          gameState={gameState}
-        />
-      </div>
-    </div>
-  )
+
+const game = gameState==='start' ?
+  <StartPage properties={properties}/> : 
+  (gameState==='middle' ? 
+    <GamePage properties={properties} /> : 
+    <EndPage properties={properties} />); 
+
+return game
 }
 
 export default App;

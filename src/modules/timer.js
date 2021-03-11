@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const Timer = (props) => {
-    const [time, setTime] = useState(props.time ? props.time : 30);
-    
-    const timeLeftStyle = {
-      color: time>10 ? (time>20 ? "#3b3640" : "#f5537e") : "#fa0a4a",
-    }
         
     useEffect(() => {
         let timer = setInterval(() => {
@@ -20,7 +15,7 @@ const Timer = (props) => {
     return(
         <div className="timerContainer" >
             <p className="timeLeft" style={timeLeftStyle}>
-                {time>0 ? time : 0} 
+                {props.time>0 ? props.time : 0} 
             </p>
             
         </div>
