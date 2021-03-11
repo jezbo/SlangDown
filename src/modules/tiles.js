@@ -54,8 +54,16 @@ const Tiles = (props) => {
     }
 
     const handleClick = () => {
+        //*******HANDLE STATE*********
+        if(
+            props.gameState==='start' 
+            || 
+            props.gameState==='end'
+        ){
+            props.manageGameState();
+        }
         //*********ADD WORD***********
-        if(word.length>0) {
+        else if(word.length>0) {
             let savedWord = word.join('');
             props.saveWord(savedWord);
             setWord([]);
