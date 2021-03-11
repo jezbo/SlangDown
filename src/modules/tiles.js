@@ -87,12 +87,13 @@ const Tiles = (props) => {
    
     const tilesProps = {
         addLetter: addLetter,
-        switch: bigTileState
+        switch: bigTileState,
+        gameState: props.gameState,
     }
     
     const babyTilesProps = {
         originIndexes: originIndex,
-        removeLetter:  removeLetter
+        removeLetter:  removeLetter,
     }
 
     //******************************ITERATE COMPONENTS************************************

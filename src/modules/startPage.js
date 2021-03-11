@@ -14,8 +14,8 @@ const StartPage = (props) => {
             </div>
             <div className="tiles-container start">
                 <Tiles 
-                    manageGameState={props.manageGameState}
-                    gameState={props.gameState}
+                    manageGameState={props.properties.manageGameState}
+                    gameState={props.properties.gameState}
                 />
             </div>
         </div>

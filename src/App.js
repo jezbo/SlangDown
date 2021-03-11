@@ -10,7 +10,7 @@ import EndPage from './modules/endPage';
 const App = () => {
 
 //*********************************STATE DECLARATIONS***********************************
-  const [gameState, setGameState] = useState('end');
+  const [gameState, setGameState] = useState('start');
   const [letters,setLetters] = useState(null);
   const [score, setScore] = useState(0);
   const [savedWords, setSavedWords] = useState([]);
@@ -72,7 +72,7 @@ const properties = {
 //*********************************COMPONENTS********************************************
 
 const game = gameState==='start' ?
-  <StartPage /> : 
+  <StartPage properties={properties}/> : 
   (gameState==='middle' ? 
     <GamePage properties={properties} /> : 
     <EndPage properties={properties} />); 
