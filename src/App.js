@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Word from './modules/word';
 import iterateComponent from './modules/iterateComponent';
 import veracityOfDefinitions from'./modules/wordVeracity';
@@ -26,6 +26,8 @@ const App = () => {
     const timer = setTimeout(timeoutCallback, (time*1000));
   }
   const startGame = () => {
+    setSavedWords([]);
+    setScore(0);
     const selectedLetters = chooseLetters(9);
     setLetters(selectedLetters);
     setGameState('middle');
