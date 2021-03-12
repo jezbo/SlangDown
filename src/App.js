@@ -26,6 +26,8 @@ const App = () => {
     const timer = setTimeout(timeoutCallback, (time*1000));
   }
   const startGame = () => {
+    setSavedWords([]);
+    setScore(0);
     const selectedLetters = chooseLetters(9);
     setLetters(selectedLetters);
     setGameState('middle');
