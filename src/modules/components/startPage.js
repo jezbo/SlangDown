@@ -1,22 +1,26 @@
 import React from 'react';
-import Tiles from './tiles';
 import Menu from './menu';
 import Score from './score';
+import GameLetters from './gameLetters'
+import WordConstructor from './wordConstructor';
+import Button from './button';
 
 const StartPage = (props) => {
+    const properties = props.properties;
+
     return (
         <div className="start-grid">
             <div className="menu-container start">
                 <Menu />
             </div>
             <div className="score-container start">
-                <Score />
+                <Score properties={properties} />
             </div>
             <div className="tiles-container start">
-                <Tiles 
-                    manageGameState={props.properties.manageGameState}
-                    gameState={props.properties.gameState}
-                />
+                <div className="letterTiles-container">
+                    <GameLetters properties={properties} />
+                </div>
+                <Button properties={properties} />
             </div>
         </div>
     )

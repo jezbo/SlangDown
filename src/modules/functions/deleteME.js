@@ -1,9 +1,8 @@
-
-
 const fetchDefinition = (word) => {
     const url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=";
     const query = word;
     const call = url+query;
+
     const theData = fetch(call, {
         "method": "GET",
         "headers": {

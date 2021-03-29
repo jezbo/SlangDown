@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Score = (props) => {
+    const properties = props.properties;
+
     return(
          <div className="score">
-            <p>{props.value}</p>
+            <p>{properties.gameState==='middle' ? properties.score : ''}</p>
         </div>
     )
     
