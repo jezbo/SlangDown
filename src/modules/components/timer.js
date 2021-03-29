@@ -14,7 +14,7 @@ const Timer = (props) => {
       }, []);
     return(
         <div className="timerContainer" >
-            <p className="timeLeft" style={timeLeftStyle}>
+            <p className="timeLeft">
                 {props.time>0 ? props.time : 0} 
             </p>
             

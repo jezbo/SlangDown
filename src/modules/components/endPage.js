@@ -1,27 +1,29 @@
 import React from 'react';
 import Menu from './menu';
 import Score from './score';
-import Tiles from './tiles';
+import GameLetters from './gameLetters';
+import WordConstructor from './wordConstructor';
+import Button from './button';
 
 const EndPage = (props) => {
+    const properties = props.properties;
+
     return (
         <div className="game-grid">
             <div className="menu-container game">
                 <Menu />
             </div>
             <div className="score-container game">
-                <Score value={props.properties.score} />
+                <Score value={properties.score} />
             </div>
             <ul className="word-container"> 
-                {props.properties.answers} 
+                {properties.answers} 
             </ul>
             <div className="tiles-container game">
-                <Tiles 
-                    manageGameState={props.properties.manageGameState}
-                    gameState={props.properties.gameState}
-                    saveWord={props.properties.saveWord}
-                    letters={props.properties.letters}
-                />
+                <div className="letterTiles-container">
+                    <GameLetters properties={properties} />
+                </div>
+                <Button properties={properties} />
             </div>
         </div>
     )

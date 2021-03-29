@@ -1,10 +1,8 @@
-
-
 const fetchDefinition = (word) => {
     const url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=";
     const query = word;
     const call = url+query;
-    console.log('fetchDef has been called');
+
     const theData = fetch(call, {
         "method": "GET",
         "headers": {
@@ -12,26 +10,13 @@ const fetchDefinition = (word) => {
             "x-rapidapi-host": "mashape-community-urban-dictionary.p.rapidapi.com"
         }
     })
-    .then(response => {
-        if(response.ok) {
-            console.log('fetch response: ' + response)
-            return response.json();
-        }
-        throw new Error('Request Failed!');
-    }, networkError => console.log(networkError.message)
-    )
+    .then(response => response.json())
     .then(data => {
-        console.log('2nd then, data: ' + data);
-        console.log('2nd then, data.list.length: ' + data.list.length);
-        console.log('2nd then, data.list.length: ' + data.list.length);
-        if(data.list.length>0) {
-            return data.list
-        }
-        else {
-            return false
-        }
-    })
-    .catch(error => console.log('ERROR'))   
+        console.log('list length: ' + data.list.length)
+        if(data.list.length>0) console.log('data: ' + JSON.stringify(data.list[0].thumbs_up))
+        return data.list;
+    }) 
+    return theData;
 }
 
 export default fetchDefinition;
