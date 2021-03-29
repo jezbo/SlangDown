@@ -14,11 +14,8 @@ const EndPage = (props) => {
                 <Menu />
             </div>
             <div className="score-container game">
-                <Score value={properties.score} />
+                <Score properties={properties} />
             </div>
-            <ul className="word-container"> 
-                {properties.answers} 
-            </ul>
             <div className="tiles-container game">
                 <div className="letterTiles-container">
                     <GameLetters properties={properties} />

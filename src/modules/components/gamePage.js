@@ -14,6 +14,11 @@ const GamePage = (props) => {
     
     const answers = iterateComponent(SubmittedWord,properties.savedWords,properties);
 
+    //***************Timeout to Gameover****************
+    const gameTimeout = setTimeout(() => {
+        properties.setGameState('end');
+        clearTimeout(gameTimeout)
+    }, (properties.time*1000))
     //**********************JSX*************************
     return (
         <div className="game-grid">

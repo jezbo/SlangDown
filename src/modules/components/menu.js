@@ -28,7 +28,7 @@ const DropDownMenu = (props) => {
                 {isActive? 'X' : '|||'}
             </button>
             <p ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`} > 
-                Find the longest slang word before the time runs out!
+                Hello!
             </p>
         </div>
     ); 

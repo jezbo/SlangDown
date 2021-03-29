@@ -35,98 +35,52 @@ const App = () => {
   const [time, setTime] = useState(90);
   const [definitions, setDefinitions] = useState([]);
 
-//****************************GAME STATE FUNCTIONS**************************************
-  // const gameTimer = () => {
-  //   const timeoutCallback = () => {
-  //     setGameState('end');
-  //     clearTimeout(timer);
-  //   }
-  //   const timer = setTimeout(timeoutCallback, (time*1000));
-  // }
-
-  // const startGame = () => {
-  //   setSavedWords([]);
-  //   setScore(0);
-  //   const selectedLetters = chooseLetters(9);
-  //   setLetters(selectedLetters);
-  //   setGameState('middle');
-  //   gameTimer(time,setGameState);
-  // }
-
-  // const manageGameState = () => {
-  //   if(gameState==='start') startGame(setSavedWords,setScore,setLetters,setGameState,time);
-  //   else if(gameState==='middle') setGameState('end');
-  //   else if (gameState==='end') startGame(); 
-  // }
-
-//*******************************SCORE FUNCTION*****************************************
-
-// const scoreFunction = (points) => {
-//   if(typeof(points)==="number") setScore(score+points)
-// }
-  
-//**********************************ANSWER FUNCTIONS*************************************
-
-  // const saveWord = async (word) => {
-  //   const wordIsUnique = !savedWords.includes(word);
-  //   if(wordIsUnique) setSavedWords((prev) => [...prev, word])
-  //   const veracity = await veracityOfDefinitions(word);
-  //   setWordVeracity((prev) => [...prev, veracity]);
-  //   if(wordIsUnique) {
-  //     veracity ? scoreFunction(word.length) : scoreFunction(-1*word.length);
-  //   }
-  // }
-
-  // const removeWord = (index) => {
-  //   setSavedWords((prev) => prev.filter((e,i) => index!==i));
-  // }
-
 //*************************************PROPS********************************************* 
-const properties = {
-  //***********STATE**************
-  gameTileState,
-  word,
-  wordData,
-  originIndex,
-  gameState,
-  letters,
-  score,
-  savedWords,
-  time,
-  wordVeracity,
-  definitions,
-  //*********SET STATE************
-  setGameTileState,
-  setWord,
-  setWordData,
-  setOriginIndex,
-  setGameState,
-  setLetters,
-  setScore,
-  setSavedWords,
-  setTime,
-  setWordVeracity,
-  setDefinitions,
-  //*********VARIABLES************
-  starterTiles,
-  gameOverTiles,
-  gameTiles,
-  bigTileSwitches: gameTileSwitches,
-  newWord,
-  minThumbsUp,
-}
+  const properties = {
+    //***********STATE**************
+    gameTileState,
+    word,
+    wordData,
+    originIndex,
+    gameState,
+    letters,
+    score,
+    savedWords,
+    time,
+    wordVeracity,
+    definitions,
+    //*********SET STATE************
+    setGameTileState,
+    setWord,
+    setWordData,
+    setOriginIndex,
+    setGameState,
+    setLetters,
+    setScore,
+    setSavedWords,
+    setTime,
+    setWordVeracity,
+    setDefinitions,
+    //*********VARIABLES************
+    starterTiles,
+    gameOverTiles,
+    gameTiles,
+    bigTileSwitches: gameTileSwitches,
+    newWord,
+    minThumbsUp,
+  }
 
-//*********************************COMPONENTS********************************************
+  //*********************************COMPONENTS********************************************
 
-const game = gameState==='start' ?
-  <StartPage properties={properties}/> 
-  : 
-  (gameState==='middle' ? 
-    <GamePage properties={properties} /> 
+  const game = gameState==='start' ?
+    <StartPage properties={properties}/> 
     : 
-    <EndPage properties={properties} />); 
+    (gameState==='middle' ? 
+      <GamePage properties={properties} /> 
+      : 
+      <EndPage properties={properties} />); 
 
-return game;
+  return game;
 }
 
 export default App;
