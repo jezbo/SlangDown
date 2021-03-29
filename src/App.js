@@ -19,9 +19,9 @@ const App = () => {
   }
   const minThumbsUp = 700;
   const newWord = [];
-  const gameTiles = ["S","L","A","N","G","D","O","W","N"];
-  const starterTiles = ["S","L","A","N","G","D","O","W","N"];
-  const gameOverTiles = ["G","A","M","E","O","V","E","R","!"];
+  const gameTiles = [...'SLANGDOWN'];
+  const gameOverTiles = [...'GAMEOVER'];
+  const endingBabyTiles = [...'PlayAgain?'] 
 //*********************************STATE DECLARATIONS***********************************
   const [gameTileState, setGameTileState] = useState(gameTileSwitches);
   const [word, setWord] = useState(newWord);
@@ -62,7 +62,7 @@ const App = () => {
     setWordVeracity,
     setDefinitions,
     //*********VARIABLES************
-    starterTiles,
+    endingBabyTiles,
     gameOverTiles,
     gameTiles,
     bigTileSwitches: gameTileSwitches,

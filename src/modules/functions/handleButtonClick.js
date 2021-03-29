@@ -10,6 +10,9 @@ const handleButtonClick = async (event, properties) => {
         gameState==='end'
     ){
         properties.setGameState('middle');
+        properties.setScore(0);
+        properties.setSavedWords([]);
+        properties.setWord([]);
     }
     //************ADD WORD DURING GAME*************
     else if(

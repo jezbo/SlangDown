@@ -136,10 +136,10 @@ button:focus {
 
 .score {
   display: flex;
-  color: rgba(255, 0, 0, 0.639);
+  color: rgba(32, 14, 14, 0.747);
   font-weight: bolder;
   font-size: 8vw;
-  border: 3vw rgba(255, 255, 255, 0.459) solid;
+  border: 3vw rgba(255, 0, 0, 0.447) solid;
   border-radius: 50%;
   height: 15vw;
   width: 15vw;
@@ -154,7 +154,7 @@ button:focus {
   color: rgb(10, 9, 9);
   font-family: 'Trebuchet MS';
   font-size: 1vw;
-  border: 3vw rgba(255, 255, 255, 0.459) solid;
+  border: 3vw rgba(255, 0, 0, 0.447) solid;
   border-radius: 50%;
   height: 15vw;
   width: 15vw;
@@ -323,12 +323,12 @@ button:focus {
   align-items: center;
   justify-content: center;
   color:  #373737;
-  height: 4vh;
+  height: 9vh;
   width: 9vh;
   padding: 1.8vh 1vh 2vh 1vh;
   border: none;
-  background-color: #fdf9e200;
-  box-shadow: 0.1vh 0.1vh grey;
+  border-radius: 50%;
+  box-shadow: 0.3vh 0.3vh rgba(0, 0, 0, 0.596);
   margin-top: 4vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1vw;

@@ -6,12 +6,13 @@ const Score = (props) => {
     const instructions = ( 
         <div className="startInstructions">
             <div className="instructionsContainer">
-                <p>FIND SLANG WORDS</p>
-                <p>GET POINTS</p>
-                <p>BIGGER WORDS</p>
-                <p>BIGGER POINTS</p>
+                <p>Find Slang Words</p>
+                <p>Get Points</p>
+                <p>Bigger Words</p>
+                <p>Bigger Points</p>
                 <p>!!BUT!!</p>
-                <p>WRONG WORDS LOSE POINTS</p>
+                <p>Get It Wrong</p> 
+                <p>Lose Points</p>
             </div>
         </div>
     );
