@@ -13,6 +13,7 @@ const handleButtonClick = async (event, properties) => {
         properties.setScore(0);
         properties.setSavedWords([]);
         properties.setWord([]);
+        properties.setGameTileState(properties.bigTileSwitches);
     }
     //************ADD WORD DURING GAME*************
     else if(

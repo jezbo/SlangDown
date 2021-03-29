@@ -69,7 +69,7 @@ const App = () => {
     newWord,
     minThumbsUp,
   }
-
+  
   //*********************************COMPONENTS********************************************
 
   const game = gameState==='start' ?

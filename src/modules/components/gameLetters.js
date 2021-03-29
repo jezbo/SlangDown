@@ -7,7 +7,10 @@ const GameLetters = (props) => {
     
     const gameTiles=iterateComponent(GameTile,properties.gameTiles,properties);
     const endTiles=iterateComponent(GameTile,properties.gameOverTiles,properties);
-    const showTiles= properties.gameState==='end' ? endTiles : gameTiles;
+    const showTiles= properties.gameState==='end' ? 
+        endTiles 
+        : 
+        gameTiles;
 
     return showTiles;
 }

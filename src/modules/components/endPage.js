@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Menu from './menu';
 import Score from './score';
 import GameLetters from './gameLetters';
@@ -10,9 +10,11 @@ import iterateComponent from '../functions/iterateComponent';
 
 const EndPage = (props) => {
     const properties = props.properties;
-
     const answers = iterateComponent(SubmittedWord,properties.savedWords,properties);
-
+    useEffect(() => {
+        properties.setGameTileState(properties.bigTileSwitches);
+    })
+    
     return (
         <div className="game-grid">
             <div className="menu-container game">

@@ -13,6 +13,9 @@ const BabyTile = (props) => {
             onClick={handleClick}
         >
             {props.value}
+            <p className='delete' >
+                {properties.gameState==='end' ? '' : 'x'}
+            </p>
         </button>
     )
 }
