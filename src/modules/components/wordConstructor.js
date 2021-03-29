@@ -1,4 +1,3 @@
-import React from 'react';
 import BabyTile from './babyTile';
 import iterateComponent from '../functions/iterateComponent';
 

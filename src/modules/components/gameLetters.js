@@ -1,4 +1,3 @@
-import React from 'react';
 import GameTile from './gameTile';
 import iterateComponent from '../functions/iterateComponent';
 
