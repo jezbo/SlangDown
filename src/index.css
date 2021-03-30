@@ -28,9 +28,10 @@ button {
   -moz-appearance: none;
 }
 
-button:hover,
+/* button:hover,
 button:focus {
-}
+
+} */
 
 button:focus {
   outline: 1px solid #fff;
