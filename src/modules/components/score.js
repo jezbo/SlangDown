@@ -11,8 +11,8 @@ const Score = (props) => {
                 <p>Bigger Words</p>
                 <p>Bigger Points</p>
                 <p>!!BUT!!</p>
-                <p>Get It Wrong</p> 
-                <p>Lose Points</p>
+                <p>Innacuracy</p> 
+                <p>Loses Points</p>
             </div>
         </div>
     );

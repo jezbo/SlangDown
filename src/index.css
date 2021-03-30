@@ -30,7 +30,6 @@ button {
 
 button:hover,
 button:focus {
-  background: #ffffff00;
 }
 
 button:focus {
@@ -288,6 +287,7 @@ button:focus {
   align-items: center;
 }
 
+
 .babyTile {
   border: 0.1vw #ffffff solid;
   box-shadow: 0.13vw 0.13vw rgb(199, 249, 189);
@@ -306,7 +306,22 @@ button:focus {
   box-shadow: 0.5vh 0.6vh rgba(255, 0, 0, 0.447);
   background-color: #fff7a0;
   color: red;
-  transform: scale(1.1, 1.1);
+}
+
+.delete {
+  border: red 1pp solid;
+  height: 0.9vw;
+  width: 0.9vw;
+  padding: 0 0 2.2% 2.7%;
+  position: absolute;
+ 
+  z-index: 3;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: 'Trebuchet MS';
+  font-size: 0.8vw;
 }
 
 /*----BUTTON START/SUBMIT/RESTART----*/
