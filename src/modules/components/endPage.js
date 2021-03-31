@@ -17,16 +17,16 @@ const EndPage = (props) => {
     
     return (
         <div className="game-grid">
-            <div className="menu-container game">
+            <div className="menu-container">
                 <Menu />
             </div>
-            <div className="score-container game">
+            <div className="score-container">
                 <Score properties={properties} />
             </div>
             <ul className="word-container"> 
                 {answers} 
             </ul>
-            <div className="tiles-container game">
+            
                 <div className="letterTiles-container">
                     <GameLetters properties={properties} />
                 </div>
@@ -34,7 +34,6 @@ const EndPage = (props) => {
                     <WordConstructor properties={properties} />
                 </div>
                 <Button properties={properties} />
-            </div>
         </div>
     )
 }

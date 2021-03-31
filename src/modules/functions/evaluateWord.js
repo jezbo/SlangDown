@@ -12,13 +12,13 @@ const evaluateWord = (data) => {
         if(data) {
             while(i<numberOfDefinitions && veracious===false) {
                 JSON.stringify(data[i].thumbs_up)>minThumbsUp ? 
-                    veracious=true 
+                    veracious='good' 
                     :
-                    veracious=false;
+                    veracious='bad';
                 i++;
                }
             } 
-        else veracious=false;   
+        else veracious='bad';   
     }   
     veracity();
     //record veracity of word in state
