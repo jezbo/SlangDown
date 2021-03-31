@@ -32,7 +32,7 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [savedWords, setSavedWords] = useState([]);
   const [wordVeracity,setWordVeracity] = useState([]);
-  const [time, setTime] = useState(900);
+  const [time, setTime] = useState(90);
   const [definitions, setDefinitions] = useState([]);
 
 //*************************************PROPS********************************************* 

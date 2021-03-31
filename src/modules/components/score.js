@@ -4,17 +4,14 @@ const Score = (props) => {
     const properties = props.properties;
     console.log(properties.gameState);
     const instructions = ( 
-        <div className="startInstructions">
+         <div className="startInstructions">
             <div className="instructionsContainer">
-                <p>Find Slang Words</p>
-                <p>Get Points</p>
-                <p>Bigger Words</p>
-                <p>Bigger Points</p>
-                <p>!!BUT!!</p>
-                <p>Innacuracy</p> 
-                <p>Loses Points</p>
+                <p>Bigger Slang Words</p>
+                <p>Win (or Lose)</p>
+                <p>Bigger Points</p> 
+               
             </div>
-        </div>
+        </div>  
     );
 
     const scoreDisplay = (
