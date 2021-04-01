@@ -13,7 +13,7 @@ const EndPage = (props) => {
     const answers = iterateComponent(SubmittedWord,properties.savedWords,properties);
     useEffect(() => {
         properties.setGameTileState(properties.bigTileSwitches);
-    })
+    }, [])
     
     return (
         <div className="game-grid">
