@@ -4,25 +4,28 @@ const evaluateWord = (data) => {
     if(data) {
         numberOfDefinitions = data.length;
     }
+    if(!data) {
+        console.log('evaluateWord no data')
+    }
+    console.log('wtf gwan??: ' + data)
     const minThumbsUp = 700;
     let i = 0;
     let veracious = false;
     
     const veracity = () => {
-        if(data) {
-            while(i<numberOfDefinitions && veracious===false) {
-                JSON.stringify(data[i].thumbs_up)>minThumbsUp ? 
-                    veracious='good' 
-                    :
-                    veracious='bad';
-                i++;
-               }
-            } 
-        else veracious='bad';   
-    }   
+        while(i<numberOfDefinitions && veracious===false) {
+            JSON.stringify(data[i].thumbs_up)>minThumbsUp ? 
+                veracious='good' 
+                :
+                veracious='bad';
+            i++;
+            }
+        } 
+        if(veracious===false) veracious='noDef';   
+
     veracity();
     //record veracity of word in state
-    if(veracious) console.log('evaluateWord, thumbs up at i-1: ' + data[i-1].thumbs_up)
+    if(veracious==='good' || veracious==='bad') console.log('evaluateWord, thumbs up at i-1: ' + data[i-1].thumbs_up)
     console.log('line24 evaluateWord, is it veracious?: ' + veracious)
     return {
         veracious, 

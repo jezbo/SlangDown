@@ -17,9 +17,10 @@ const GamePage = (props) => {
 
     //***************Timeout to Gameover****************
 
-    const gameTimeout = setTimeout(() => {
-        clearTimeout(gameTimeout)
+    let gameTimeout = setTimeout(() => {
         properties.setGameState('end');
+        clearTimeout(gameTimeout);
+        gameTimeout=0;
     }, (properties.time*1000))
     //**********************JSX*************************
     return (
