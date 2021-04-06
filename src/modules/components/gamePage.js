@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import iterateComponent from '../functions/iterateComponent';
 import Menu from './menu';
 import Score from './score';
@@ -17,11 +17,16 @@ const GamePage = (props) => {
 
     //***************Timeout to Gameover****************
 
-    let gameTimeout = setTimeout(() => {
-        properties.setGameState('end');
-        clearTimeout(gameTimeout);
-        gameTimeout=0;
-    }, (properties.time*1000))
+    
+
+    useEffect(() => {
+        let gameTimeout = setTimeout(() => {
+            console.log('timeout at start: ' + gameTimeout);
+            properties.setGameState('end');
+            console.log('gameTimeout: ' + gameTimeout)
+        }, (properties.time*1000))
+        return () => clearTimeout(gameTimeout)
+    }, [])
     //**********************JSX*************************
     return (
         <div className="game-grid">

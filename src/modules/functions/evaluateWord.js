@@ -19,9 +19,12 @@ const evaluateWord = (data) => {
                 :
                 veracious='bad';
             i++;
-            }
-        } 
+        }
+        
         if(veracious===false) veracious='noDef';   
+    } 
+
+        
 
     veracity();
     //record veracity of word in state
