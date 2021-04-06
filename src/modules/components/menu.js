@@ -4,10 +4,10 @@ import React, { useState, useRef } from 'react';
 const DropDownMenu = (props) => {
     const activeStyle = {
         transform: "rotate(0deg)",
-        boxShadow: "0.1vw 0.1vw rgba(255, 0, 0, 0.447)",
+        boxShadow: "0.1vw 0.1vw rgba(0, 81, 255, 0.447)",
         paddingTop : "0.3vw",
         paddingRight: "0.25vw",
-        color: "red",
+        color: "rgba(0, 81, 255)",
         backgroundColor: "rgba(0, 0, 0, 0)",
     }
     const inactiveStyle = {
@@ -28,7 +28,7 @@ const DropDownMenu = (props) => {
                 {isActive? 'X' : '|||'}
             </button>
             <p ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`} > 
-                Find the longest slang word before the time runs out!
+                Howdy.
             </p>
         </div>
     ); 

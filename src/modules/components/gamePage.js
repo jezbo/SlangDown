@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import iterateComponent from '../functions/iterateComponent';
 import Menu from './menu';
 import Score from './score';
@@ -10,24 +10,37 @@ import Button from './button';
 
 const GamePage = (props) => {
     const properties = props.properties;
+    
     //********************ANSWERS***********************
     
     const answers = iterateComponent(SubmittedWord,properties.savedWords,properties);
 
+    //***************Timeout to Gameover****************
+
+    
+
+    useEffect(() => {
+        let gameTimeout = setTimeout(() => {
+            console.log('timeout at start: ' + gameTimeout);
+            properties.setGameState('end');
+            console.log('gameTimeout: ' + gameTimeout)
+        }, (properties.time*1000))
+        return () => clearTimeout(gameTimeout)
+    }, [])
     //**********************JSX*************************
     return (
         <div className="game-grid">
-            <div className="menu-container game">
+            <div className="menu-container">
                 <Menu />
             </div>
-            <div className="score-container game">
+            <div className="score-container">
                 <Score properties={properties} />
             </div>
             <BarTimer properties={properties} />
             <ul className="word-container"> 
                 {answers} 
             </ul>
-            <div className="tiles-container game">
+            {/* <div className="tiles-container"> */}
                 <div className="letterTiles-container">
                     <GameLetters properties={properties} />
                 </div>
@@ -36,7 +49,7 @@ const GamePage = (props) => {
                 </div>
                 <div className="button-container">
                     <Button properties={properties} />
-                </div>
+                {/* </div> */}
                 
             </div>
         </div>

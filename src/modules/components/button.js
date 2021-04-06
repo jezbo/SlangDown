@@ -13,12 +13,12 @@ const Button = (props) => {
                 onClick={onClick}
             >
                     {properties.gameState==='start' ? 
-                        'START' 
+                        'GO' 
                         : 
                         (properties.gameState==='middle' ? 
-                            'SUBMIT' 
+                            'ENTER' 
                             : 
-                            'RESTART'
+                            'AGAIN!'
                         )
                     }
             </button>

@@ -11,8 +11,7 @@ const GameTile = (props) => {
 
     return (
         <button 
-            className={`tile ${properties.gameTileState[props.index] ? 'active' : 'inactive'}`} 
-            //value={props.value ? props.value.toLowerCase() : props.value} 
+            className={`tile ${properties.gameTileState[props.index] ? 'active' : 'inactive'}`}
             onClick={handleEvent}
         >
             {props.value}

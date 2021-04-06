@@ -9,6 +9,14 @@ const handleButtonClick = async (event, properties) => {
         ||
         gameState==='end'
     ){
+        properties.setScore(0);
+        properties.setSavedWords([]);
+        properties.setWord([]);
+        properties.setWordVeracity([]);
+        properties.setWordData([]);
+        properties.setOriginIndex([]);
+        properties.setDefinitions([]);
+        properties.setGameTileState(properties.bigTileSwitches);
         properties.setGameState('middle');
     }
     //************ADD WORD DURING GAME*************
