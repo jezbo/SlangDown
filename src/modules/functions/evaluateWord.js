@@ -27,7 +27,7 @@ const evaluateWord = (data) => {
 
     veracity();
     //record veracity of word in state
-    if(veracious==='good' || veracious==='bad' && data) console.log('evaluateWord, thumbs up at i-1: ' + data[i-1].thumbs_up)
+    if(data && (veracious==='good' || veracious==='bad')) console.log('evaluateWord, thumbs up at i-1: ' + data[i-1].thumbs_up)
     return {
         veracious, 
         i: i-1
