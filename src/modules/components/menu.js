@@ -20,7 +20,6 @@ const DropDownMenu = (props) => {
     const dropdownRef = useRef(null);
     const clickHandler = (e) => {
         setIsActive(!isActive);
-        console.log(isActive)
     }
     return (
         <div className="menu-div" >

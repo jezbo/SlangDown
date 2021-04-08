@@ -21,9 +21,7 @@ const GamePage = (props) => {
 
     useEffect(() => {
         let gameTimeout = setTimeout(() => {
-            console.log('timeout at start: ' + gameTimeout);
             properties.setGameState('end');
-            console.log('gameTimeout: ' + gameTimeout)
         }, (properties.time*1000))
         return () => clearTimeout(gameTimeout)
     }, [])

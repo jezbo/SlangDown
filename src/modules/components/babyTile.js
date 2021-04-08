@@ -8,15 +8,18 @@ const BabyTile = (props) => {
 
 
     return (
-            <button 
+        <div>
+             <button 
                 className="babyTile" 
                 onClick={handleClick}
             >
                 {props.value}
-                <p className='delete' >
-                    {properties.gameState==='end' ? '' : 'x'}
-                </p>
             </button>
+            {/*<p className='delete' >
+                {properties.gameState==='end' ? '' : 'x'}
+            </p>*/}
+        </div>
+           
        
     )
 }

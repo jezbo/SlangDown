@@ -5,7 +5,6 @@ const GameTile = (props) => {
     const properties = props.properties;
 
     const handleEvent = (event) => {
-        //console.log('value gameTile: ' + props.value)
         handleGameTileClick(props.value,properties,props.index)
     }
 

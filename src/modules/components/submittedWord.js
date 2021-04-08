@@ -16,8 +16,10 @@ const SubmittedWord = (props) => {
         console.log(newWord);
         const verifyWord = async() => {
             const data = await fetchDefinition(newWord)
-            if(data) console.log('oi there ent no bloody data! so wtf? ' + (Object.keys))
             console.log('submittedWord, data: ' + data);
+
+            
+
             const veracity = evaluateWord(data);
             console.log('SUbmittedWord, veracity: ' + veracity.veracious);
             setVeracity((prev) => [...prev, veracity.veracious]);
