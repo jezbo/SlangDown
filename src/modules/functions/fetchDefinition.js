@@ -12,10 +12,10 @@ const fetchDefinition = (word) => {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('list length: ' + data.list.length)
         if(data.list.length>0) console.log('data: ' + JSON.stringify(data.list[0].thumbs_up))
         return data.list;
     }) 
+    .catch(error => console.log(error))
     return theData;
 }
 
