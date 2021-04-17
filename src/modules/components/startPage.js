@@ -1,3 +1,9 @@
+/*
+    User is greeted by this page after starting App
+    it has menu (currently empty), instructions, name 
+    of game and start button.
+*/
+
 import React from 'react';
 import Menu from './menu';
 import Score from './score';
@@ -7,8 +13,12 @@ import Button from './button';
 import BarTimer from './barTimer';
 
 const StartPage = (props) => {
+
+    // Simplify access to State/Global Variable library
     const properties = props.properties;
-    let answers;
+
+
+    //*************************************JSX************************************
     return (
         <div className="game-grid">
             <div className="menu-container">
@@ -19,19 +29,15 @@ const StartPage = (props) => {
             </div>
             <BarTimer properties={properties} />
             <ul className="word-container"> 
-                {answers} 
             </ul>
-            {/* <div className="tiles-container"> */}
-                <div className="letterTiles-container">
-                    <GameLetters properties={properties} />
-                </div>
-                <div className="babyTiles-container">
-                    <WordConstructor properties={properties} />
-                </div>
-                <div className="button-container">
-                    <Button properties={properties} />
-                {/* </div> */}
-                
+            <div className="letterTiles-container">
+                <GameLetters properties={properties} />
+            </div>
+            <div className="babyTiles-container">
+                <WordConstructor properties={properties} />
+            </div>
+            <div className="button-container">
+                <Button properties={properties} />
             </div>
         </div>
     )
