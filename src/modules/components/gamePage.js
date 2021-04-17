@@ -1,3 +1,10 @@
+/*
+    User selects to start game, gameState is set to 'middle'
+    and this page is loaded. From here the game is played until 
+    time is up.
+*/
+
+// Module imports
 import React, { useEffect } from 'react';
 import iterateComponent from '../functions/iterateComponent';
 import Menu from './menu';
@@ -9,22 +16,24 @@ import WordConstructor from './wordConstructor';
 import Button from './button';
 
 const GamePage = (props) => {
+
+    //Simplify access to State/Global Variable library
     const properties = props.properties;
     
     //********************ANSWERS***********************
-    
+    //display answers, right or worng (styling will differentiate this)
     const answers = iterateComponent(SubmittedWord,properties.savedWords,properties);
 
     //***************Timeout to Gameover****************
-
-    
-
+    //Game has time limit, change gameState to 'end' after timeout
+    //timeOut starts on page mount and cleared on dismount
     useEffect(() => {
         let gameTimeout = setTimeout(() => {
             properties.setGameState('end');
         }, (properties.time*1000))
         return () => clearTimeout(gameTimeout)
     }, [])
+
     //**********************JSX*************************
     return (
         <div className="game-grid">

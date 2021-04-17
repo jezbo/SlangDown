@@ -35,8 +35,11 @@ const App = () => {
   const [time, setTime] = useState(90);
   const [definitions, setDefinitions] = useState([]);
 
-//*************************************PROPS********************************************* 
-  const properties = {
+//*************************************PROPS LIBRARY********************************************* 
+// This creates a library of all 
+// States & Global Variables available 
+// via props throughout the whole app    
+const properties = {
     //***********STATE**************
     gameTileState,
     word,
@@ -70,7 +73,7 @@ const App = () => {
     minThumbsUp,
   }
   
-  //*********************************COMPONENTS********************************************
+  //*********************************JSX********************************************
 
   const game = gameState==='start' ?
     <StartPage properties={properties}/> 
