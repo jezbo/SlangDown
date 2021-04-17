@@ -1,6 +1,6 @@
 /*
     Creates the smaller letter tiles that appear as the game tiles are selected, 
-    so these spell the desired word
+    These spell the desired word in wordConstructor.js
 */
 import React from 'react';
 import handleBabyTileClick from '../functions/handleBabyTileClick';
