@@ -1,5 +1,10 @@
-const removeWord = (index, properties) => {
-    properties.setSavedWords((prev) => prev.filter((e,i) => index!==i));
-}
+/*
+    Deprecated method no longer required by
+    the game rules.
+*/
 
-export default removeWord;
+// const removeWord = (index, properties) => {
+//     properties.setSavedWords((prev) => prev.filter((e,i) => index!==i));
+// }
+
+// export default removeWord;
