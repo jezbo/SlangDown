@@ -1,6 +1,11 @@
+/*
+    Handles the clicking of the Start/Submit/Restart button
+    dependent on the gameState.
+*/
+
 import saveWord from './saveWord';
 
-const handleButtonClick = async (event, properties) => {
+const handleButtonClick = (event, properties) => {
     const gameState=properties.gameState;
 
     //*******HANDLE STATE AT START AND END*********

@@ -1,3 +1,10 @@
+/*
+    Not currently in use - 
+    Requires revision to improve letter spread.
+    Sets out probability of letter to be chosen
+    Chooses letters and returns them in an array 
+*/
+
 const chooseLetters = (number) => {
     if(number<1) {console.log('chooseLetters must be passed a number > 0')}
     else{

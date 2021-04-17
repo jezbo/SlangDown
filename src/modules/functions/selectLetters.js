@@ -1,3 +1,7 @@
+/*
+
+*/
+
 const selectLetters = (properties) => {
     if(properties.gameState==='end') properties.gameTiles = properties.gameOverTiles;
     else if(properties.letters && properties.letters.length>0) {

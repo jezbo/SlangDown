@@ -1,3 +1,8 @@
+/*
+    iterates over a given array and puts each value 
+    into the given component via its value prop  
+*/
+
 import React from 'react';
 
 const iterateComponent = (Component, array, props) => {

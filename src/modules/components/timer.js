@@ -1,25 +1,29 @@
-import React, { useState, useEffect } from 'react';
+/*
+  Deprecated Timer
+*/
 
-const Timer = (props) => {
+// import React, { useState, useEffect } from 'react';
+
+// const Timer = (props) => {
         
-    useEffect(() => {
-        let timer = setInterval(() => {
-          setTime((t) => t-1);
-          console.log('still running');
-        }, 1000);
-        return() => {
-          clearInterval(timer); 
-          console.log('cleaned up')
-        }  
-      }, []);
-    return(
-        <div className="timerContainer" >
-            <p className="timeLeft">
-                {props.time>0 ? props.time : 0} 
-            </p>
+//     useEffect(() => {
+//         let timer = setInterval(() => {
+//           setTime((t) => t-1);
+//           console.log('still running');
+//         }, 1000);
+//         return() => {
+//           clearInterval(timer); 
+//           console.log('cleaned up')
+//         }  
+//       }, []);
+//     return(
+//         <div className="timerContainer" >
+//             <p className="timeLeft">
+//                 {props.time>0 ? props.time : 0} 
+//             </p>
             
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default Timer;
+// export default Timer;
