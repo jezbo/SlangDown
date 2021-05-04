@@ -1,7 +1,5 @@
 /*
-    Displays the score on gamePage & endPage 
-    (gameState==='middle' or 'end') and instructions 
-    on start Page (gameState==='start').
+    Displays the score
 */
 
 import React from 'react';
@@ -14,29 +12,11 @@ const Score = (props) => {
 
     console.log(properties.gameState);
 
-    //JSX if startPage
-    const instructions = ( 
-         <div className="startInstructions">
-            <div className="instructionsContainer">
-                <p>Bigger Slang Words</p>
-                <p>Win (or Lose)</p>
-                <p>Bigger Points</p> 
-               
-            </div>
-        </div>  
-    );
-
-    //JSX if gamePage or endPage
-    const scoreDisplay = (
+    return (
         <div className="score">
-            <p>{properties.score}</p>
+            {properties.gameState==='start' ? <p>00</p> : <p>{properties.score}</p>}
         </div> 
-    );
-    
-
-    //return correct JSX dependent on gameState
-    return properties.gameState==='start' ? instructions : scoreDisplay;
-    
+    )
 }
 
 export default Score;
