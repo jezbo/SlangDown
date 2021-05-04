@@ -126,16 +126,13 @@ button:focus {
   
 }
 
-.score, 
-.startInstructions {
+.score {
   display: flex;
   color: rgb(10, 9, 9);
   font-family: 'Trebuchet MS';
-  font-size: 20vh;
-  border: 5vh rgba(0, 81, 255, 0.447) solid;
+  font-size: calc(18px + 25vh);
+  border: 8px rgba(0, 81, 255, 0.447) solid;
   border-radius: 50%;
-  height: 37vh;
-  width: 37vh;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -143,15 +140,16 @@ button:focus {
 
 /*---****************************INSTRUCTIONS************************---*/
 .startInstructions {
-  font-size: 2.3vw;
+  grid-area: 6/2/span 1/span 9;
+  font-size: 18px;
   padding: 0.1vw 0.1vw 0 0.1vw;  
   display: flex;
   color: rgb(10, 9, 9);
   font-family: 'Trebuchet MS';
-  border: 5vh rgba(0, 81, 255, 0.447) solid;
+  border: 8px rgba(0, 81, 255, 0.447) solid;
   border-radius: 50%;
-  height: 37vh;
-  width: 37vh;
+  height: 100px;
+  width: 100px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -350,15 +348,14 @@ button:focus {
   align-items: center;
   justify-content: center;
   color:  #373737;
-  height: 10vh;
-  width: 10vh;
-  min-width: 50px;
+  height: 50px;
+  width: 50px;
   padding: 1.8vh 1vh 2vh 1vh;
   border: 1px rgba(0, 81, 255, 0.447) solid;
   border-radius: 50%;
   box-shadow: 0.3vh 0.3vh rgba(0, 0, 0, 0.596);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
 }
 
