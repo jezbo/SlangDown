@@ -136,8 +136,8 @@ button:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 40vh;
-  width: 40vh;
+  height: 35vh;
+  width: 35vh;
 }
 
 /*---****************************INSTRUCTIONS************************---*/
@@ -305,7 +305,7 @@ button:focus {
   width: 7vh;
   height: 7vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 3.5vh;
+  font-size: 6vh;
   display: flex;
   align-items: center;
   justify-content: center;
