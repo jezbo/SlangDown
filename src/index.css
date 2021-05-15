@@ -273,7 +273,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   margin: 0 1vh;
-  
+  border-radius: 10%;
 } 
 
 .tile.active {
@@ -311,6 +311,7 @@ button:focus {
   justify-content: center;
   margin: 0 1vh;
   background-color: #fff7a0af;
+  border-radius: 10%;
 }
 
 .babyTile:active {
