@@ -239,12 +239,6 @@ button:focus {
 }
 
 /*---***************************GAME TILES***********************---*/
-/* .tiles-container {
-  grid-area: 5/2/span 3/ span 9;
-  margin-top: 1vh;
-  height: 100%;
-  width: 100%;
-} */
 
 .gameTiles {
   display: grid;
@@ -342,7 +336,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3vh;
+  padding-bottom: 1vh;
 }
 
 .button {
