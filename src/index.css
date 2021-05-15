@@ -9,14 +9,14 @@ body {
   font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
+  background-image: url('https://previews.123rf.com/images/lenta/lenta1903/lenta190300003/119809017-old-brick-wall-in-london.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   cursor: default;
 }
 
 button {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.747);
   border: none;
   margin: 0;
   text-decoration: none;
@@ -201,8 +201,7 @@ button:focus {
   box-shadow: 0.6vw 0.3vw grey;
   margin: 0.4vh 0;
   padding: 0.2vw 0.2vw 0.2vw 0.5vw;
-  background-color: rgba(255, 255, 255, 0.459);
-  box-shadow: 0.05vw 0.05vw rgb(128, 128, 128);
+  background-color: rgba(255, 255, 255, 0.699);
 }
 
 .word.pending {
@@ -275,11 +274,11 @@ button:focus {
   justify-content: center;
   margin: 0 1vh;
   
-}
+} 
 
 .tile.active {
   box-shadow: 0.5vh 0.6vh rgba(0, 81, 255, 0.447);
-  background-color: #fff7a06b;
+  background-color: #fff7a09a;
   color: rgb(0, 81, 255);
 }
 
@@ -311,7 +310,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   margin: 0 1vh;
-  background-color: #fff7a06b;
+  background-color: #fff7a0af;
 }
 
 .babyTile:active {
@@ -349,7 +348,7 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:  #336e03;
+  color:  #1c300c;
   height: 50px;
   width: 50px;
   padding: 1.8vh 1vh 2vh 1vh;
