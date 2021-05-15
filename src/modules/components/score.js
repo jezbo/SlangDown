@@ -14,7 +14,7 @@ const Score = (props) => {
 
     return (
         <div className="score">
-            {properties.gameState==='start' ? <p>00</p> : <p>{properties.score}</p>}
+            {properties.gameState==='start' ? <p>0</p> : <p>{properties.score}</p>}
         </div> 
     )
 }
