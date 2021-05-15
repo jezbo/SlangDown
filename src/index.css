@@ -9,7 +9,7 @@ body {
   font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://image.freepik.com/free-photo/shattered-brick-wall-distnace_1194-7503.jpg');
+  background-image: url('https://cdn.shopify.com/s/files/1/2658/1334/products/HJ07256_1024x1024@2x.jpg?v=1571678341');
   background-repeat: no-repeat;
   background-size: cover;
   cursor: default;
@@ -119,7 +119,7 @@ button:focus {
 /*---****************************SCORE******************************---*/
 
 .score-container {
-  grid-area: 1/5/span 4/span 3;
+  grid-area: 1/4/span 4/span 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,11 +131,13 @@ button:focus {
   color: rgb(10, 9, 9);
   font-family: 'Trebuchet MS';
   font-size: calc(18px + 25vh);
-  border: 8px rgba(0, 81, 255, 0.447) solid;
+  border: 4vh rgba(0, 81, 255, 0.447) solid;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 40vh;
+  width: 40vh;
 }
 
 /*---****************************INSTRUCTIONS************************---*/
@@ -301,10 +303,10 @@ button:focus {
 .babyTile {
   border: 0.1vw #ffffff solid;
   box-shadow: 0.13vw 0.13vw rgb(199, 249, 189);
-  width: 9vh;
-  height: 9vh;
+  width: 7vh;
+  height: 7vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 3.5vw;
+  font-size: 3.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,7 +349,7 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:  #373737;
+  color:  #336e03;
   height: 50px;
   width: 50px;
   padding: 1.8vh 1vh 2vh 1vh;
