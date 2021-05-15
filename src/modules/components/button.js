@@ -22,15 +22,7 @@ const Button = (props) => {
                 className={`button ${properties.gameState}`} 
                 onClick={onClick}
             >
-                    {properties.gameState==='start' ? 
-                        'GO' 
-                        : 
-                        (properties.gameState==='middle' ? 
-                            'ENTER' 
-                            : 
-                            'AGAIN!'
-                        )
-                    }
+                GO
             </button>
         </div>
     )
