@@ -130,7 +130,7 @@ button:focus {
   display: flex;
   color: rgb(10, 9, 9);
   font-family: 'Trebuchet MS';
-  font-size: calc(18px + 25vh);
+  font-size: calc(18px + 20vh);
   border: 4vh rgba(0, 81, 255, 0.447) solid;
   border-radius: 50%;
   justify-content: center;
@@ -181,7 +181,7 @@ button:focus {
   padding-right: 2vw;
 }
 
-.words {
+/* .words {
   height: 5%;
   width: 10%;
   min-height: 18px;
@@ -191,29 +191,31 @@ button:focus {
   align-items: center;
   cursor: default;
   padding:1vh 0;
-  }
+  } */
 
 .word {
-  font-family: "Arial";
-  font-size: 13px;
+  width: 80px;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   box-shadow: 0.6vw 0.3vw grey;
-  margin: 0.4vh 0;
-  padding: 0.2vw 0.2vw 0.2vw 0.5vw;
+  margin: 1vh 0;
+  padding: 0.2vw 0.2vw 0.2vw 7px;
   background-color: rgba(255, 255, 255, 0.699);
 }
 
 .word.pending {
-  box-shadow: 0.1vw 0.1vw rgba(0, 81, 255, 0.447);
+  box-shadow: 0.2vw 0.2vw rgba(0, 81, 255, 0.447);
 }
 
 .word.good {
-  box-shadow: 0.1vw 0.1vw rgb(146, 247, 113);
+  box-shadow: 0.2vw 0.2vw rgb(146, 247, 113);
 }
 
 .word.bad {
-  box-shadow: 0.1vw 0.1vw rgba(255, 25, 25, 0.644);
+  box-shadow: 0.2vw 0.2vw rgba(255, 25, 25, 0.644);
 }
 
 .exit {
@@ -239,12 +241,6 @@ button:focus {
 }
 
 /*---***************************GAME TILES***********************---*/
-/* .tiles-container {
-  grid-area: 5/2/span 3/ span 9;
-  margin-top: 1vh;
-  height: 100%;
-  width: 100%;
-} */
 
 .gameTiles {
   display: grid;
@@ -342,7 +338,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3vh;
+  padding-bottom: 1vh;
 }
 
 .button {
